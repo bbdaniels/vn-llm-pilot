@@ -1,0 +1,492 @@
+.label {
+    margin: .75rem 0;
+}
+
+.hint {
+    margin: .5rem 0;
+    color: rgba(0,0,0,.65);
+    font-style: italic;
+}
+
+.chatbot-container {
+    border: 1px solid #047CC2;
+    border-radius: 8px;
+    margin: .5rem 0;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    height: 800px; 
+    max-height: 800px; 
+    min-height: 800px;
+    overflow: hidden;
+    position: relative;
+}
+
+.conversation-display {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px 8px 0 0;
+    box-sizing: border-box;
+    min-height: 0;
+    max-height: calc(800px - 100px);
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+
+/* Prevent body scroll when chatbot is scrolling */
+.chatbot-container:focus-within {
+    position: relative;
+}
+
+/* Custom scrollbar styling for WebKit browsers */
+.conversation-display::-webkit-scrollbar {
+    width: 6px;
+}
+
+.conversation-display::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.conversation-display::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.conversation-display::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.message {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-message {
+    align-items: flex-end;
+}
+
+.bot-message {
+    align-items: flex-start;
+}
+
+.message-content {
+    max-width: 80%;
+    padding: 0.75rem 1rem;
+    border-radius: 18px;
+    word-wrap: break-word;
+    word-break: break-word;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+    max-width: calc(100% - 2rem);
+    box-sizing: border-box;
+}
+
+.user-message .message-content {
+    background-color: #047CC2;
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.bot-message .message-content {
+    background-color: #e9ecef;
+    color: #333;
+    border-bottom-left-radius: 4px;
+}
+
+.input-container {
+    border-top: 1px solid #ddd;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 0 0 8px 8px;
+    flex-shrink: 0;
+    min-height: 80px;
+}
+
+.input-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-end;
+}
+
+.button-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.user-input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+    resize: none;
+    overflow-y: hidden;
+    min-height: 20px;
+    max-height: 120px;
+    line-height: 1.4;
+    box-sizing: border-box;
+    transition: height 0.2s ease;
+}
+
+.user-input:focus {
+    border-color: #047CC2;
+}
+
+/* Add scrollbar styling for when content exceeds max-height */
+.user-input::-webkit-scrollbar {
+    width: 4px;
+}
+
+.user-input::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2px;
+}
+
+.user-input::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 2px;
+}
+
+.user-input::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+.send-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #047CC2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.send-button:hover {
+    background-color: #036aa8;
+}
+
+.send-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.clear-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.clear-button:hover {
+    background-color: #c82333;
+}
+
+.clear-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.complete-button {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 8px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.complete-button:hover {
+    background-color: #218838;
+}
+
+.complete-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.loading-indicator {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #666;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.welcome-message {
+    margin-bottom: 0;
+    min-height: 60px;
+}
+
+.is-read-only .chatbot-container {
+    background-color: rgba(0,0,0,.07);
+    border: 1px solid rgba(0,0,0,.3);
+}
+
+.is-read-only .conversation-display {
+    background-color: rgba(0,0,0,.03);
+}
+
+.suggested-prompts {
+    margin: 0.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.suggested-prompts button {
+    padding: 0.5rem 1rem;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.2s;
+}
+
+.suggested-prompts button:hover {
+    background-color: #e9ecef;
+}
+
+.typing-indicator {
+    animation: blink 1s infinite;
+    color: #047CC2;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Ensure the entire plugin doesn't expand */
+.field-container {
+    max-height: 600px;
+    overflow: hidden;
+}
+
+/* Fix for SurveyCTO iframe behavior */
+body {
+    overflow-x: hidden;
+}
+
+/* Ensure the plugin container behaves properly */
+.plugin-container {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Tablet responsiveness */
+@media (max-width: 640px) {
+    .chatbot-container {
+        height: 600px;
+        max-height: 600px;
+        min-height: 600px;
+    }
+    
+    .conversation-display {
+        max-height: calc(600px - 120px);
+    }
+    
+    .input-wrapper {
+        flex-direction: column !important;
+        align-items: stretch;
+        gap: 12px;
+    }
+    
+    .button-row {
+        justify-content: flex-end;
+        gap: 10px;
+        align-self: stretch;
+    }
+    
+    .user-input {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .message-content {
+        max-width: 85%;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+    .chatbot-container {
+        height: 450px;
+        max-height: 450px;
+        min-height: 450px;
+    }
+    
+    .conversation-display {
+        max-height: calc(450px - 100px);
+        padding: 0.75rem;
+    }
+    
+    .input-container {
+        padding: 0.75rem;
+        min-height: 70px;
+    }
+    
+    .input-wrapper {
+        flex-direction: column !important;
+        gap: 10px;
+    }
+    
+    .button-row {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .send-button,
+    .clear-button,
+    .complete-button {
+        min-width: 70px;
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+    
+    .user-input {
+        min-height: 44px;
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 12px;
+    }
+    
+    .message-content {
+        max-width: 90%;
+        padding: 0.6rem 0.8rem;
+    }
+    
+    .suggested-prompts {
+        gap: 0.25rem;
+    }
+    
+    .suggested-prompts button {
+        font-size: 11px;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+    .button-row {
+        flex-direction: column;
+        width: 100%;
+        gap: 6px;
+    }
+    
+    .send-button,
+    .clear-button,
+    .complete-button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .input-container {
+        min-height: 90px;
+    }
+}
+
+/* High DPI display adjustments */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .conversation-display::-webkit-scrollbar {
+        width: 8px;
+    }
+}
+
+/* Focus states for accessibility */
+.user-input:focus,
+.send-button:focus,
+.clear-button:focus,
+.complete-button:focus {
+    outline: 2px solid #047CC2;
+    outline-offset: 2px;
+}
+
+.suggested-prompts button:focus {
+    outline: 2px solid #047CC2;
+    outline-offset: 2px;
+}
+
+/* Animation for message appearance */
+@keyframes messageSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-content.animate {
+    animation: messageSlideIn 0.3s ease-out;
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.loading-indicator span {
+    animation: pulse 1.5s infinite;
+}
+
+/* Print styles */
+@media print {
+    .chatbot-container {
+        border: 1px solid #000;
+        background-color: #fff;
+        height: auto;
+        max-height: none;
+        min-height: auto;
+    }
+    
+    .input-container {
+        display: none;
+    }
+    
+    .conversation-display {
+        overflow: visible;
+        max-height: none;
+    }
+    
+    .clear-button,
+    .complete-button {
+        display: none;
+    }
+}

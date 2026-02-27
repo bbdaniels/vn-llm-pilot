@@ -1,0 +1,64 @@
+<div class="label default-question-text-size" dir="auto">{{{LABEL}}}</div>
+
+<!-- Media support -->
+{{#MEDIAIMAGE}}
+    <img src="{{MEDIAIMAGE}}" />
+{{/MEDIAIMAGE}}
+
+{{#MEDIAAUDIO}}
+    <audio controls controlsList="nodownload">
+        <source src="{{MEDIAAUDIO}}">
+        Your browser does not support the audio element.
+    </audio>
+{{/MEDIAAUDIO}}
+
+{{#MEDIAVIDEO}}
+    <video width="100%" height="*" controls controlsList="nodownload">
+        <source src="{{MEDIAVIDEO}}">
+        Your browser does not support the video tag.
+    </video>
+{{/MEDIAVIDEO}}
+
+<div class="hint default-hint-text-size" dir="auto">{{{HINT}}}</div>
+
+<!-- Chatbot Interface -->
+<div class="chatbot-container">
+    <!-- Conversation Display -->
+    <div class="conversation-display" id="conversation-display">
+        <!-- Welcome message will be generated dynamically by JavaScript -->
+    </div>
+    
+    <!-- Input Area -->
+    {{^READONLY}}
+    <div class="input-container">
+        <div class="input-wrapper">
+            <textarea 
+                id="user-input" 
+                class="user-input default-answer-text-size" 
+                placeholder="Type your message here..."
+                dir="auto"
+                rows="1"
+            ></textarea>
+            <div class="button-row">
+                <button id="send-button" class="send-button" type="button">Send</button>
+                <button id="clear-button" class="clear-button" type="button" style="display: none;">
+                    <span id="clear-button-text">Clear</span>
+                </button>
+                <button id="complete-button" class="complete-button" type="button" style="display: none;" title="Complete conversation">
+                    <span id="complete-button-text">✓</span>
+                </button>
+            </div>
+        </div>
+        <div class="loading-indicator" id="loading-indicator" style="display: none;">
+            <span>AI is thinking...</span>
+        </div>
+    </div>
+    {{/READONLY}}
+</div>
+
+<div class="suggested-prompts" id="suggested-prompts">
+    <!-- Dynamically populated from parameters -->
+</div>
+
+<!-- Hidden field to store conversation data -->
+<input type="hidden" id="conversation-data" value="{{CURRENT_ANSWER}}" />

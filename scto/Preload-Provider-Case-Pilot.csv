@@ -1,0 +1,27 @@
+record_id,provider ,case_1,case_2,case_3,case_4,case_5,case_6
+test,Test Respondent,htn,covid,t2d,tb1,hbp,t2d
+demo,Demo,covid,covid,covid,covid,covid,covid
+PT-24-001,Chu Thị Lâm,hbc,ast,hbp,hbv,pne,t2d
+PT-24-002,Đỗ Thị Bình,tb1,hcv,htn,arv,hbc,ast
+PT-24-003,Hoàng Thạch Kiên,pne,t2d,hbc,tb1,hbp,hbv
+PT-24-004,Lê Thị Hiền,hcv,arv,htn,hbc,ast,pne
+PT-24-005,Lê Thị Huyền Thanh,t2d,hbp,hcv,tb1,hbv,htn
+PT-24-006,Nguyễn Minh Hưng,ast,pne,hcv,arv,t2d,hbc
+PT-24-007,Nguyễn Thanh Thủy,tb1,htn,ast,hbp,hbv,hcv
+PT-24-008,Nguyễn Thị Hải Yến,arv,pne,hbc,t2d,hbp,tb1
+PT-24-009,Nguyễn Thị Hồng Huệ,htn,hbp,hbv,ast,hcv,pne
+PT-24-010,Nguyễn Thị Hồng Ngọc,t2d,tb1,arv,hbc,htn,hbp
+PT-24-011,Nguyễn Thị Thu Huyền,hbv,hcv,ast,arv,pne,t2d
+PT-24-012,Nguyễn Thị Thúy Liên,tb1,hbc,hbp,htn,hbv,ast
+PT-24-013,Nguyễn Thị Tố Như,hcv,pne,arv,hbc,t2d,tb1
+PT-24-014,Nguyễn Văn Minh,hbp,hbv,htn,hcv,ast,pne
+PT-24-015,Nguyễn Văn Phong,t2d,tb1,arv,hbc,htn,hbp
+PT-24-016,Phùng Thị Bích Hồng,ast,pne,t2d,hbv,hcv,arv
+PT-24-017,Phùng Thị Duyên,hbc,hbp,hbv,tb1,htn,ast
+PT-24-018,Phùng Thị Thúy Hường,pne,hcv,t2d,arv,hbc,tb1
+PT-24-019,Trần Quốc Tuấn,hbp,hbv,htn,hcv,ast,pne
+PT-24-020,Trần Thị Thu Phương,t2d,arv,tb1,hbc,hbp,htn
+PT-24-021,Trần Thị Tuyết Nhung,hbv,hcv,ast,arv,pne,t2d
+PT-24-022,Vi Quang Long,tb1,hbc,hbp,htn,hbv,ast
+PT-24-023,Vũ Thị Ngọc Ánh,hcv,arv,pne,hbc,t2d,tb1
+PT-24-024,Vũ Trường Thành,htn,hbp,hbv,ast,hcv,pne
