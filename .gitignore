@@ -4,3 +4,4 @@
 .Rapp.history
 temp/
 *.log
+__pycache__/

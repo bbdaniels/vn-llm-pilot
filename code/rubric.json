@@ -1,0 +1,2646 @@
+{
+  "cases": {
+    "ast": {
+      "items": [
+        {
+          "id": "ast_h_1",
+          "label": "Episodic",
+          "action": "ask about",
+          "question": "AH1: Does the difficulty breathing come and go and/or is it episodic?"
+        },
+        {
+          "id": "ast_h_2",
+          "label": "Episode Duration",
+          "action": "ask about",
+          "question": "AH2: How long does an episode or attack typically last?"
+        },
+        {
+          "id": "ast_h_3",
+          "label": "Symptom Start",
+          "action": "ask about",
+          "question": "AH3: Since when have you had these symptoms?"
+        },
+        {
+          "id": "ast_h_4",
+          "label": "Previous Episodes",
+          "action": "ask about",
+          "question": "AH4: Have you had any other episodes previously?"
+        },
+        {
+          "id": "ast_h_5",
+          "label": "Fever",
+          "action": "ask about",
+          "question": "AH5: Do you have a fever?"
+        },
+        {
+          "id": "ast_h_6",
+          "label": "Episode Frequency",
+          "action": "ask about",
+          "question": "AH6: How often does it happen?"
+        },
+        {
+          "id": "ast_h_7",
+          "label": "Cough",
+          "action": "ask about",
+          "question": "AH7: Do you cough?"
+        },
+        {
+          "id": "ast_h_8",
+          "label": "Cough Amount",
+          "action": "ask about",
+          "question": "AH8: Are you coughing a lot?"
+        },
+        {
+          "id": "ast_h_9",
+          "label": "Cough Dry or Wet",
+          "action": "ask about",
+          "question": "AH9: Tell me more about your cough. Is it dry or wet?"
+        },
+        {
+          "id": "ast_h_10",
+          "label": "Cough Blood",
+          "action": "ask about",
+          "question": "AH10: Are you coughing up any blood or mucus?"
+        },
+        {
+          "id": "ast_h_11",
+          "label": "Chest Sound",
+          "action": "ask about",
+          "question": "AH11: Do you ever have wheezing/noise in your chest?"
+        },
+        {
+          "id": "ast_h_12",
+          "label": "Close Contact",
+          "action": "ask about",
+          "question": "AH12: Have you been in contact with anyone with fever and cough in the previous 3-5 days?"
+        },
+        {
+          "id": "ast_h_13",
+          "label": "Weight Loss",
+          "action": "ask about",
+          "question": "AH13: Have you lost weight?"
+        },
+        {
+          "id": "ast_h_14",
+          "label": "Night Sweats",
+          "action": "ask about",
+          "question": "AH14: Have you had night sweats?"
+        },
+        {
+          "id": "ast_h_15",
+          "label": "Pain",
+          "action": "ask about",
+          "question": "AH15: Do you have any pain?"
+        },
+        {
+          "id": "ast_h_16",
+          "label": "Self Relief",
+          "action": "ask about",
+          "question": "AH16: How do you get relief?"
+        },
+        {
+          "id": "ast_h_17",
+          "label": "Episode Trigger",
+          "action": "ask about",
+          "question": "AH17: What triggers the episodes (e.g., dust, pollution, bad air quality, cold)?"
+        },
+        {
+          "id": "ast_h_18",
+          "label": "Cold Weather",
+          "action": "ask about",
+          "question": "AH18: Does it happen when the weather is cold?"
+        },
+        {
+          "id": "ast_h_19",
+          "label": "Dusty",
+          "action": "ask about",
+          "question": "AH19: Does it happen when it is dusty?"
+        },
+        {
+          "id": "ast_h_20",
+          "label": "Smoky",
+          "action": "ask about",
+          "question": "AH20: Does it happen when it is smoky?"
+        },
+        {
+          "id": "ast_h_21",
+          "label": "Season Change",
+          "action": "ask about",
+          "question": "AH21: Does it change with the season change?"
+        },
+        {
+          "id": "ast_h_22",
+          "label": "Worse Times",
+          "action": "ask about",
+          "question": "AH22: Is it worse at certain times of the day?"
+        },
+        {
+          "id": "ast_h_23",
+          "label": "Family Current",
+          "action": "ask about",
+          "question": "AH23: Do any of your siblings/parents have similar problems?"
+        },
+        {
+          "id": "ast_h_24",
+          "label": "Family History",
+          "action": "ask about",
+          "question": "AH24: Does anyone in your household or family have a history of similar symptoms?"
+        },
+        {
+          "id": "ast_h_25",
+          "label": "Younger",
+          "action": "ask about",
+          "question": "AH25: Has this happened before when you were younger?"
+        },
+        {
+          "id": "ast_h_26",
+          "label": "Medication",
+          "action": "ask about",
+          "question": "AH26: Have you taken any medication?"
+        },
+        {
+          "id": "ast_h_27",
+          "label": "Cough Syrup",
+          "action": "ask about",
+          "question": "AH27: Do you know the name of the cough syrup?"
+        },
+        {
+          "id": "ast_h_28",
+          "label": "Smoke",
+          "action": "ask about",
+          "question": "AH28: Do you smoke?"
+        },
+        {
+          "id": "ast_h_29",
+          "label": "Alcohol",
+          "action": "ask about",
+          "question": "AH29: Do you drink alcohol?"
+        },
+        {
+          "id": "ast_h_30",
+          "label": "CVD",
+          "action": "ask about",
+          "question": "AH30: Do you have hypertension / high blood pressure or diabetes/blood sugar issues?"
+        },
+        {
+          "id": "ast_h_31",
+          "label": "STD",
+          "action": "ask about",
+          "question": "AH31: Have you ever had any HIV/STIs/STDs? Any history of HIV/STIs/STDs?"
+        },
+        {
+          "id": "ast_lt_1",
+          "label": "Peak Expiratory Flow",
+          "action": "order",
+          "question": "ALT1: Peak Expiratory Flow (PEF)"
+        },
+        {
+          "id": "ast_lt_2",
+          "label": "FEV1",
+          "action": "order",
+          "question": "ALT2: Predicted FEV1"
+        },
+        {
+          "id": "ast_d",
+          "label": "Asthma Diagnosis",
+          "action": "",
+          "question": "AD: correctly diagnose asthma?"
+        },
+        {
+          "id": "ast_t_1",
+          "label": "Outpatient",
+          "action": "",
+          "question": "AT1: Treat the patient in outpatient"
+        },
+        {
+          "id": "ast_t_2",
+          "label": "ICS-formoterol",
+          "action": "prescribe",
+          "question": "AT2: Low-dose ICS-formoterol for symptom relief. (e.g., Budesonide-fomoterol 160/4.5 mcd, 1 inhalation as needed)"
+        },
+        {
+          "id": "ast_t_3",
+          "label": "SABA",
+          "action": "prescribe",
+          "question": "AT3: As-needed SABA?"
+        },
+        {
+          "id": "ast_con_1",
+          "label": "Explain Trigger",
+          "action": "",
+          "question": "ACON1: Explain possible triggers (i.e., dust, cold air), and the importance of limiting exposure to the triggers"
+        },
+        {
+          "id": "ast_con_2",
+          "label": "Mask",
+          "action": "explain",
+          "question": "ACON2: Use a mask, particularly in places or conditions where the trigger is present"
+        },
+        {
+          "id": "ast_con_3",
+          "label": "Room Clean",
+          "action": "explain",
+          "question": "ACON3: Keep the room clean and well-ventilated"
+        },
+        {
+          "id": "ast_con_4",
+          "label": "Emergency Management",
+          "action": "",
+          "question": "ACON4: Explain conditions that required emergency management (e.g., worsening difficulty breathing)"
+        },
+        {
+          "id": "ast_con_5",
+          "label": "Explain Medication",
+          "action": "",
+          "question": "ACON5: Explain how to use the medication (inhaler or spacer technique)"
+        },
+        {
+          "id": "ast_referral",
+          "label": "Asthma Referral",
+          "action": "",
+          "question": "make a referral?"
+        }
+      ]
+    },
+    "pne": {
+      "items": [
+        {
+          "id": "pne_h_1",
+          "label": "Other Symptoms",
+          "action": "ask about",
+          "question": "PH1: What other symptoms do you have?"
+        },
+        {
+          "id": "pne_h_2",
+          "label": "Symptom Duration",
+          "action": "ask about",
+          "question": "PH2: How long has the cough lasted?"
+        },
+        {
+          "id": "pne_h_3",
+          "label": "Cough Dry or Productive",
+          "action": "ask about",
+          "question": "PH3: Is the cough dry or productive?"
+        },
+        {
+          "id": "pne_h_4",
+          "label": "Sputum Color",
+          "action": "ask about",
+          "question": "PH4: What color is the sputum/mucus?"
+        },
+        {
+          "id": "pne_h_5",
+          "label": "Sputum Blood",
+          "action": "ask about",
+          "question": "PH5: Is there blood in the sputum/mucus?"
+        },
+        {
+          "id": "pne_h_6",
+          "label": "Chest Pain",
+          "action": "ask about",
+          "question": "PH6: Is there chest pain?"
+        },
+        {
+          "id": "pne_h_7",
+          "label": "Difficulty Breathing",
+          "action": "ask about",
+          "question": "PH7: Any difficulty in breathing?"
+        },
+        {
+          "id": "pne_h_8",
+          "label": "Appetite",
+          "action": "ask about",
+          "question": "PH8: How is your appetite?"
+        },
+        {
+          "id": "pne_h_9",
+          "label": "Fever",
+          "action": "ask about",
+          "question": "PH9: Do you have a high or low fever?"
+        },
+        {
+          "id": "pne_h_10",
+          "label": "Fatigue",
+          "action": "ask about",
+          "question": "PH10: Are you tired or lethargic?"
+        },
+        {
+          "id": "pne_h_11",
+          "label": "Swallow",
+          "action": "ask about",
+          "question": "PH11: Any difficulty in swallowing?"
+        },
+        {
+          "id": "pne_h_12",
+          "label": "Runny Nose",
+          "action": "ask about",
+          "question": "PH12: Is there a runny nose?"
+        },
+        {
+          "id": "pne_h_13",
+          "label": "Medication History",
+          "action": "ask about",
+          "question": "PH13: Have you received any medication?"
+        },
+        {
+          "id": "pne_h_14",
+          "label": "Similar Symptoms",
+          "action": "ask about",
+          "question": "PH14: Have you experienced similar symptoms before?"
+        },
+        {
+          "id": "pne_h_15",
+          "label": "Family Current",
+          "action": "ask about",
+          "question": "PH15: Do any of your siblings/parents currently have similar problems?"
+        },
+        {
+          "id": "pne_h_16",
+          "label": "Family History",
+          "action": "ask about",
+          "question": "PH16: Does anyone in your household or family have a history of similar symptoms?"
+        },
+        {
+          "id": "pne_h_17",
+          "label": "Eye Redness",
+          "action": "ask about",
+          "question": "PH17: Redness of eyes?"
+        },
+        {
+          "id": "pne_h_18",
+          "label": "COVID Vaccine",
+          "action": "ask about",
+          "question": "PH18: Have you received the COVID-19 vaccine?"
+        },
+        {
+          "id": "pne_h_19",
+          "label": "Flu Vaccine",
+          "action": "ask about",
+          "question": "PH19: Have you received the influenza vaccine?"
+        },
+        {
+          "id": "pne_h_20",
+          "label": "Smoke",
+          "action": "ask about",
+          "question": "PH20: Do you smoke?"
+        },
+        {
+          "id": "pne_lt_1",
+          "label": "Chest X-ray",
+          "action": "order",
+          "question": "PLT1: Chest X-ray"
+        },
+        {
+          "id": "pne_lt_2",
+          "label": "Complete Blood Count",
+          "action": "order tests of",
+          "question": "PLT2: Complete Blood Count (CBC): WBC, neutrophils, bands, lymphocytes, Hb"
+        },
+        {
+          "id": "pne_d",
+          "label": "Pneumonia Diagnosis",
+          "action": "",
+          "question": "PD: correctly diagnose pneumonia?"
+        },
+        {
+          "id": "pne_t_1",
+          "label": "Inpatient",
+          "action": "",
+          "question": "PT1: Treat the patient as an inpatient"
+        },
+        {
+          "id": "pne_t_2",
+          "label": "Ceftriaxone",
+          "action": "prescribe",
+          "question": "PT2: Ceftriaxone 2g daily, IV"
+        },
+        {
+          "id": "pne_t_3",
+          "label": "Paracetamol",
+          "action": "prescribe",
+          "question": "PT3: Paracetamol 500 mg PO up to four times daily"
+        },
+        {
+          "id": "pne_t_4",
+          "label": "Monitor Vital Signs",
+          "action": "",
+          "question": "PT4: Monitor vital signs"
+        },
+        {
+          "id": "pne_con_1",
+          "label": "Explain Emergency Conditions",
+          "action": "",
+          "question": "ACON1: Explain conditions that required emergency management (e.g., confusion, worsening difficulty breathing)"
+        },
+        {
+          "id": "pne_con_2",
+          "label": "Encourage Intake",
+          "action": "",
+          "question": "ACON2: Encourage feeding and fluid intake"
+        },
+        {
+          "id": "pne_referral",
+          "label": "Pneumonia Referral",
+          "action": "",
+          "question": "make a referral?"
+        }
+      ]
+    },
+    "t2d": {
+      "items": [
+        {
+          "id": "t2d_h_1",
+          "label": "Symptom Duration",
+          "action": "ask about",
+          "question": "DH1: How long has this been going on?"
+        },
+        {
+          "id": "t2d_h_2",
+          "label": "Fever",
+          "action": "ask about",
+          "question": "DH2: Do you have a fever?"
+        },
+        {
+          "id": "t2d_h_3",
+          "label": "Vomiting",
+          "action": "ask about",
+          "question": "DH3: Do you have any vomiting?"
+        },
+        {
+          "id": "t2d_h_4",
+          "label": "Appetite",
+          "action": "ask about",
+          "question": "DH4: Has your appetite changed?"
+        },
+        {
+          "id": "t2d_h_5",
+          "label": "Thirst",
+          "action": "ask about",
+          "question": "DH5: Has your thirst changed?"
+        },
+        {
+          "id": "t2d_h_6",
+          "label": "Diarrhea",
+          "action": "ask about",
+          "question": "DH6: Do you have diarrhea?"
+        },
+        {
+          "id": "t2d_h_7",
+          "label": "Cough",
+          "action": "ask about",
+          "question": "DH7: Do you have a cough?"
+        },
+        {
+          "id": "t2d_h_8",
+          "label": "Shortness of Breath",
+          "action": "ask about",
+          "question": "DH8: Do you experience shortness of breath?"
+        },
+        {
+          "id": "t2d_h_9",
+          "label": "Medication History",
+          "action": "ask about",
+          "question": "DH9: Do you take any medications?"
+        },
+        {
+          "id": "t2d_h_10",
+          "label": "Urination Description",
+          "action": "ask about",
+          "question": "DH10: How about your urination?"
+        },
+        {
+          "id": "t2d_h_11",
+          "label": "Limbs Numbness",
+          "action": "ask about",
+          "question": "DH11: Do you experience numbness or tingling in your limbs?"
+        },
+        {
+          "id": "t2d_h_12",
+          "label": "Smoke",
+          "action": "ask about",
+          "question": "DH12: Do you smoke?"
+        },
+        {
+          "id": "t2d_h_13",
+          "label": "Alcohol",
+          "action": "ask about",
+          "question": "DH13: Do you consume alcohol?"
+        },
+        {
+          "id": "t2d_h_14",
+          "label": "Exercise",
+          "action": "ask about",
+          "question": "DH14: Do you regularly exercise?"
+        },
+        {
+          "id": "t2d_h_15",
+          "label": "Health Checks History",
+          "action": "ask about",
+          "question": "DH15: Did you take any health checks?"
+        },
+        {
+          "id": "t2d_h_16",
+          "label": "Blood Pressure History",
+          "action": "ask about",
+          "question": "DH16: How about blood pressure? Do you have a history of high blood pressure?"
+        },
+        {
+          "id": "t2d_h_17",
+          "label": "Family Diabetes History",
+          "action": "ask about",
+          "question": "DH17: Do you have any family history of diabetes?"
+        },
+        {
+          "id": "t2d_h_18",
+          "label": "Family Hypertension History",
+          "action": "ask about",
+          "question": "DH18: Do you have any family history of hypertension?"
+        },
+        {
+          "id": "t2d_h_19",
+          "label": "Dizziness",
+          "action": "ask about",
+          "question": "DH19: Do you experience any dizziness?"
+        },
+        {
+          "id": "t2d_h_20",
+          "label": "Headaches or Joint Pain",
+          "action": "ask about",
+          "question": "DH20: Do you have any headaches or joint pain?"
+        },
+        {
+          "id": "t2d_ce_1",
+          "label": "Abdomen Exam",
+          "action": "order",
+          "question": "DCE1: Abdomen Exam"
+        },
+        {
+          "id": "t2d_ce_2",
+          "label": "Oral Exam",
+          "action": "order",
+          "question": "DCE2: Oral Exam"
+        },
+        {
+          "id": "t2d_ce_3",
+          "label": "Neurological Exam",
+          "action": "order",
+          "question": "DCE3: Neurological Exam"
+        },
+        {
+          "id": "t2d_ce_4",
+          "label": "Fundoscopy",
+          "action": "order",
+          "question": "DCE4: Fundoscopy"
+        },
+        {
+          "id": "t2d_ce_5",
+          "label": "Weight",
+          "action": "order",
+          "question": "DCE5: Weight"
+        },
+        {
+          "id": "t2d_ce_6",
+          "label": "Height",
+          "action": "order",
+          "question": "DCE6: Height"
+        },
+        {
+          "id": "t2d_lt_1",
+          "label": "Fasting Blood Sugar",
+          "action": "order",
+          "question": "DLT1: Fasting blood sugar"
+        },
+        {
+          "id": "t2d_lt_2",
+          "label": "Random Blood Sugar",
+          "action": "order",
+          "question": "DLT2: Random blood sugar"
+        },
+        {
+          "id": "t2d_lt_3",
+          "label": "HbA1c",
+          "action": "order",
+          "question": "DLT3: HbA1c"
+        },
+        {
+          "id": "t2d_d",
+          "label": "Diabetes Diagnosis",
+          "action": "",
+          "question": "DD: correctly diagnose diabetes?"
+        },
+        {
+          "id": "t2d_t_1",
+          "label": "Diabetic Clinic Referral",
+          "action": "",
+          "question": "DT1: Refer to the diabetic clinic"
+        },
+        {
+          "id": "t2d_t_2",
+          "label": "Oral Hypoglycemics",
+          "action": "prescribe",
+          "question": "DT2: Start oral hypoglycemics"
+        },
+        {
+          "id": "t2d_t_3",
+          "label": "Lifestyle Modification",
+          "action": "recommend",
+          "question": "DT3: Lifestyle modifications (diet and exercise)"
+        },
+        {
+          "id": "t2d_t_4",
+          "label": "Monitor Glucose Levels",
+          "action": "recommend",
+          "question": "DT4: Monitor glucose levels"
+        },
+        {
+          "id": "t2d_con_1",
+          "label": "Explain Condition",
+          "action": "",
+          "question": "DCON1: Explain his condition and diagnosis"
+        },
+        {
+          "id": "t2d_con_2",
+          "label": "Explain Foot Care",
+          "action": "",
+          "question": "DCON2: Explain the importance of foot care and how to do that"
+        },
+        {
+          "id": "t2d_con_3",
+          "label": "Diet and Exercise Guidance",
+          "action": "provide",
+          "question": "DCON3: Instructions about diet and exercise guidance"
+        },
+        {
+          "id": "t2d_con_4",
+          "label": "Medication Adherence",
+          "action": "explain importance of",
+          "question": "DCON4: Medication adherence"
+        },
+        {
+          "id": "t2d_referral",
+          "label": "Diabetes Referral",
+          "action": "",
+          "question": "Did the provider make a referral?"
+        }
+      ]
+    },
+    "tb1": {
+      "items": [
+        {
+          "id": "tb1_h_1",
+          "label": "Cough Duration",
+          "action": "ask about",
+          "question": "TH1: Since when have you had this cough?"
+        },
+        {
+          "id": "tb1_h_2",
+          "label": "Cough Type",
+          "action": "ask about",
+          "question": "TH2: What is the cough type?"
+        },
+        {
+          "id": "tb1_h_3",
+          "label": "Sputum Color",
+          "action": "ask about",
+          "question": "TH3: What is the color of the sputum?"
+        },
+        {
+          "id": "tb1_h_4",
+          "label": "Sputum Blood",
+          "action": "ask about",
+          "question": "TH4: Is there any blood in the sputum?"
+        },
+        {
+          "id": "tb1_h_5",
+          "label": "Sputum Blood Color",
+          "action": "ask about",
+          "question": "TH5: What is the color of the blood?"
+        },
+        {
+          "id": "tb1_h_6",
+          "label": "Cough Condition",
+          "action": "ask about",
+          "question": "TH6: Is the cough a change in a particular condition, such as when it is cold?"
+        },
+        {
+          "id": "tb1_h_7",
+          "label": "Chest Pain or Difficulty Breathing",
+          "action": "ask about",
+          "question": "TH7: Do you experience chest pain or breathing difficulty?"
+        },
+        {
+          "id": "tb1_h_8",
+          "label": "Fever",
+          "action": "ask about",
+          "question": "TH8: Do you have a fever? If yes, is it high or low?"
+        },
+        {
+          "id": "tb1_h_9",
+          "label": "Fever Pattern",
+          "action": "ask about",
+          "question": "TH9: How was the fever pattern?"
+        },
+        {
+          "id": "tb1_h_10",
+          "label": "Night Sweats",
+          "action": "ask about",
+          "question": "TH10: Do you have any night sweats?"
+        },
+        {
+          "id": "tb1_h_11",
+          "label": "Family Chronic Cough",
+          "action": "ask about",
+          "question": "TH11: Does anyone in your household have a chronic cough?"
+        },
+        {
+          "id": "tb1_h_12",
+          "label": "Father Treatment",
+          "action": "ask about",
+          "question": "TH12: Has your father gotten treatment?"
+        },
+        {
+          "id": "tb1_h_13",
+          "label": "Weight Loss",
+          "action": "ask about",
+          "question": "TH13: Do you experience weight loss?"
+        },
+        {
+          "id": "tb1_h_14",
+          "label": "Appetite Change",
+          "action": "ask about",
+          "question": "TH14: Does your appetite change?"
+        },
+        {
+          "id": "tb1_h_15",
+          "label": "Fatigue",
+          "action": "ask about",
+          "question": "TH15: Do you have fatigue?"
+        },
+        {
+          "id": "tb1_h_16",
+          "label": "Prior Episodes",
+          "action": "ask about",
+          "question": "TH16: Have you ever had a similar cough like this before (prior episodes)?"
+        },
+        {
+          "id": "tb1_h_17",
+          "label": "Medication History",
+          "action": "ask about",
+          "question": "TH17: Do you have a history of previous medication?"
+        },
+        {
+          "id": "tb1_h_18",
+          "label": "Alcohol",
+          "action": "ask about",
+          "question": "TH18: How about your alcohol use?"
+        },
+        {
+          "id": "tb1_h_19",
+          "label": "Smoke",
+          "action": "ask about",
+          "question": "TH19: Do you smoke?"
+        },
+        {
+          "id": "tb1_h_20",
+          "label": "HIV Test History",
+          "action": "ask about",
+          "question": "TH20: Have you ever tested for HIV?"
+        },
+        {
+          "id": "tb1_h_21",
+          "label": "Diet",
+          "action": "ask about",
+          "question": "TH21: How about your diet?"
+        },
+        {
+          "id": "tb1_h_22",
+          "label": "Profession",
+          "action": "ask about",
+          "question": "TH22: What is your profession?"
+        },
+        {
+          "id": "tb1_h_23",
+          "label": "Sex Worker",
+          "action": "ask about",
+          "question": "TH23: Have you had sex with a sex worker previously? Any high-risk sexual behavior?"
+        },
+        {
+          "id": "tb1_h_24",
+          "label": "IV Drug Use",
+          "action": "ask about",
+          "question": "TH24: Have you ever engaged with IV drug use?"
+        },
+        {
+          "id": "tb1_ce_1",
+          "label": "Weight",
+          "action": "order",
+          "question": "TCE1: Weight"
+        },
+        {
+          "id": "tb1_ce_2",
+          "label": "Height",
+          "action": "order",
+          "question": "TCE2: Height"
+        },
+        {
+          "id": "tb1_lt_1",
+          "label": "Sputum Exam",
+          "action": "order",
+          "question": "TLT1: Sputum exam"
+        },
+        {
+          "id": "tb1_lt_2",
+          "label": "Chest X-ray",
+          "action": "order",
+          "question": "TLT2: Chest x-ray"
+        },
+        {
+          "id": "tb1_lt_3",
+          "label": "ESR (erythrocyte sedimentation rate)",
+          "action": "order",
+          "question": "TLT3: ESR (erythrocyte sedimentation rate)"
+        },
+        {
+          "id": "tb1_lt_4",
+          "label": "HIV test",
+          "action": "order",
+          "question": "TLT4: HIV test"
+        },
+        {
+          "id": "tb1_lt_5",
+          "label": "Blood sugar test",
+          "action": "order",
+          "question": "TLT5: Blood sugar test"
+        },
+        {
+          "id": "tb1_d",
+          "label": "TB Diagnosis",
+          "action": "",
+          "question": "TD:correctly diagnose TB?"
+        },
+        {
+          "id": "tb1_t_1",
+          "label": "Start TB Regimen",
+          "action": "prescribe",
+          "question": "TT1: Start TB regimen (4 drugs for 2 months, then 2 drugs for 6 months)"
+        },
+        {
+          "id": "tb1_t_2",
+          "label": "Refer to TB Clinic",
+          "action": "",
+          "question": "TT2: Refer to the TB clinic for follow-up"
+        },
+        {
+          "id": "tb1_con_1",
+          "label": "Medication Adherence",
+          "action": "",
+          "question": "TCON1: Explain adherence to TB medication"
+        },
+        {
+          "id": "tb1_con_2",
+          "label": "Close Contacts",
+          "action": "recommend",
+          "question": "TCON2: Testing and treatment for close contacts"
+        },
+        {
+          "id": "tb1_con_3",
+          "label": "Hygiene",
+          "action": "",
+          "question": "TCON3: Explain hygiene and ventilation"
+        },
+        {
+          "id": "tb1_con_4",
+          "label": "Nutrition",
+          "action": "",
+          "question": "TCON4: Explain nutrition guidance"
+        },
+        {
+          "id": "tb1_referral",
+          "label": "TB Referral",
+          "action": "",
+          "question": "make a referral?"
+        }
+      ]
+    },
+    "htn": {
+      "items": [
+        {
+          "id": "htn_h_1",
+          "label": "Other Symptoms",
+          "action": "ask about",
+          "question": "HH1: What other symptoms do you have?"
+        },
+        {
+          "id": "htn_h_2",
+          "label": "Describe Headache",
+          "action": "ask about",
+          "question": "HH2: Can you describe how the headache is?"
+        },
+        {
+          "id": "htn_h_3",
+          "label": "Starting Time",
+          "action": "ask about",
+          "question": "HH3: When does it usually start during the day?"
+        },
+        {
+          "id": "htn_h_4",
+          "label": "Symptom Duration",
+          "action": "ask about",
+          "question": "HH4: How many days has it been?"
+        },
+        {
+          "id": "htn_h_5",
+          "label": "Symptom Frequency",
+          "action": "ask about",
+          "question": "HH5: Does the headache come every day?"
+        },
+        {
+          "id": "htn_h_6",
+          "label": "Chest Pain",
+          "action": "ask about",
+          "question": "HH6: Is there chest pain?"
+        },
+        {
+          "id": "htn_h_7",
+          "label": "Difficulty Breathing",
+          "action": "ask about",
+          "question": "HH7: Any difficulty in breathing?"
+        },
+        {
+          "id": "htn_h_8",
+          "label": "Vision Changes",
+          "action": "ask about",
+          "question": "HH8: Any vision changes?"
+        },
+        {
+          "id": "htn_h_9",
+          "label": "Heart Palpitations",
+          "action": "ask about",
+          "question": "HH9: Any heart palpitations?"
+        },
+        {
+          "id": "htn_h_10",
+          "label": "Limbs Numbness",
+          "action": "ask about",
+          "question": "HH10: Do you have numbness or tingling in the limbs?"
+        },
+        {
+          "id": "htn_h_11",
+          "label": "Fatigue",
+          "action": "ask about",
+          "question": "HH11: Do you feel tired easily?"
+        },
+        {
+          "id": "htn_h_12",
+          "label": "Disease History",
+          "action": "ask about",
+          "question": "HH12: Do you have a previous disease or illness?"
+        },
+        {
+          "id": "htn_h_13",
+          "label": "Diabetes History",
+          "action": "ask about",
+          "question": "HH13: Do you have a history of diabetes?"
+        },
+        {
+          "id": "htn_h_14",
+          "label": "High Blood Pressure History",
+          "action": "ask about",
+          "question": "HH14: Do you have a history of high blood pressure?"
+        },
+        {
+          "id": "htn_h_15",
+          "label": "Stroke History",
+          "action": "ask about",
+          "question": "HH15: Do you have a history of stroke?"
+        },
+        {
+          "id": "htn_h_16",
+          "label": "Family Hypertension History",
+          "action": "ask about",
+          "question": "HH16: Do you have any family history of hypertension?"
+        },
+        {
+          "id": "htn_h_17",
+          "label": "Exercise",
+          "action": "ask about",
+          "question": "HH17: Do you regularly exercise?"
+        },
+        {
+          "id": "htn_h_18",
+          "label": "Diet",
+          "action": "ask about",
+          "question": "HH18: How about your everyday food?"
+        },
+        {
+          "id": "htn_h_19",
+          "label": "Medication History",
+          "action": "ask about",
+          "question": "HH19: Have you received any medication?"
+        },
+        {
+          "id": "htn_h_20",
+          "label": "Health Check History",
+          "action": "ask about",
+          "question": "HH20: Did you take any health checks before?"
+        },
+        {
+          "id": "htn_ce_1",
+          "label": "Weight",
+          "action": "order tests of",
+          "question": "HCE1: Weight"
+        },
+        {
+          "id": "htn_ce_2",
+          "label": "Height",
+          "action": "order tests of",
+          "question": "HCE2: Height"
+        },
+        {
+          "id": "htn_lt_1",
+          "label": "Haemoglobin",
+          "action": "order tests of",
+          "question": "HLT1: Haemoglobin"
+        },
+        {
+          "id": "htn_lt_2",
+          "label": "Lipid Profile",
+          "action": "order tests of",
+          "question": "HLT2: Lipid Profile"
+        },
+        {
+          "id": "htn_lt_3",
+          "label": "Renal Function",
+          "action": "order tests of",
+          "question": "HLT3: Renal Function"
+        },
+        {
+          "id": "htn_lt_4",
+          "label": "ECG",
+          "action": "order tests of",
+          "question": "HLT4: ECG"
+        },
+        {
+          "id": "htn_lt_5",
+          "label": "Urinalysis",
+          "action": "order tests of",
+          "question": "HLT5: Urinalysis"
+        },
+        {
+          "id": "htn_d",
+          "label": "Hypertension Diagnosis",
+          "action": "",
+          "question": "HD: correctly diagnose hypertension?"
+        },
+        {
+          "id": "htn_t_1",
+          "label": "Outpatient",
+          "action": "",
+          "question": "HT1: Treat as an outpatient"
+        },
+        {
+          "id": "htn_t_2",
+          "label": "Antihypertension",
+          "action": "prescribe",
+          "question": "HT2: Give Antihypertension (ACEI inhibitor or CCB) for 2 weeks."
+        },
+        {
+          "id": "htn_t_3",
+          "label": "Statin Treatment",
+          "action": "",
+          "question": "HT3: Initiate statin treatment"
+        },
+        {
+          "id": "htn_t_4",
+          "label": "Recheck BP",
+          "action": "",
+          "question": "HT4: Recheck BP in 1 months"
+        },
+        {
+          "id": "htn_con_1",
+          "label": "Medicine Instructions",
+          "action": "",
+          "question": "HCON1: Instruct on how to drink the medicine"
+        },
+        {
+          "id": "htn_con_2",
+          "label": "Lifestyle Modification",
+          "action": "recommend",
+          "question": "HCON2: Lifestyle modification (DASH diet-low sodium, high fruits, low saturated fat, exercise regularly, reduce salt intake, and alcohol)"
+        },
+        {
+          "id": "htn_con_3",
+          "label": "Return",
+          "action": "",
+          "question": "HCON3: Instruct to return after 2 weeks"
+        },
+        {
+          "id": "htn_con_4",
+          "label": "Emergency Care",
+          "action": "",
+          "question": "HCON4: Explain conditions that needs emergency care"
+        },
+        {
+          "id": "htn_referral",
+          "label": "Hypertension Referral",
+          "action": "",
+          "question": "make a referral?"
+        }
+      ]
+    },
+    "hbc": {
+      "items": [
+        {
+          "id": "hbc_h_1",
+          "label": "Hep B History",
+          "action": "ask about",
+          "question": "HBCH1: Have you ever been diagnosed with hepatitis B?"
+        },
+        {
+          "id": "hbc_h_2",
+          "label": "Antiviral Medication History",
+          "action": "ask about",
+          "question": "HBCH2: Have you ever taken any antiviral medications?"
+        },
+        {
+          "id": "hbc_h_3",
+          "label": "Alcohol",
+          "action": "ask about",
+          "question": "HBCH3: Do you consume alcohol?"
+        },
+        {
+          "id": "hbc_h_4",
+          "label": "Smoke",
+          "action": "ask about",
+          "question": "HBCH4: Do you smoke?"
+        },
+        {
+          "id": "hbc_h_5",
+          "label": "Weight Changes",
+          "action": "ask about",
+          "question": "HBCH5: Have you had any recent weight changes?"
+        },
+        {
+          "id": "hbc_h_6",
+          "label": "Appetite Change",
+          "action": "ask about",
+          "question": "HBCH6: Has your appetite changed?"
+        },
+        {
+          "id": "hbc_h_7",
+          "label": "Skin Change",
+          "action": "ask about",
+          "question": "HBCH7: Have you noticed any changes in your skin?"
+        },
+        {
+          "id": "hbc_h_8",
+          "label": "Urine Color",
+          "action": "ask about",
+          "question": "HBCH8: How about your urine color?"
+        },
+        {
+          "id": "hbc_h_9",
+          "label": "Symptom Duration",
+          "action": "ask about",
+          "question": "HBCH9: Since when have you experienced these symptoms?"
+        },
+        {
+          "id": "hbc_h_10",
+          "label": "Vomiting",
+          "action": "ask about",
+          "question": "HBCH10: Do you experience any vomiting?"
+        },
+        {
+          "id": "hbc_h_11",
+          "label": "Bleeding",
+          "action": "ask about",
+          "question": "HBCH11: Do you experience any bleeding?"
+        },
+        {
+          "id": "hbc_h_12",
+          "label": "Difficulty Breathing",
+          "action": "ask about",
+          "question": "HBCH12: Do you experience any difficulty breathing?"
+        },
+        {
+          "id": "hbc_h_13",
+          "label": "Chronic Illness or Liver Disease",
+          "action": "ask about",
+          "question": "HBCH13: Do you have a history of chronic illnesses or liver diseases?"
+        },
+        {
+          "id": "hbc_h_14",
+          "label": "Fever",
+          "action": "ask about",
+          "question": "HBCH14: Do you have a fever?"
+        },
+        {
+          "id": "hbc_h_15",
+          "label": "Leg Swelling",
+          "action": "ask about",
+          "question": "HBCH15: Do you have leg swelling?"
+        },
+        {
+          "id": "hbc_h_16",
+          "label": "Bigger Belly",
+          "action": "ask about",
+          "question": "HBCH16: Do you think that your belly is getting bigger?"
+        },
+        {
+          "id": "hbc_h_17",
+          "label": "STD History",
+          "action": "ask about",
+          "question": "HBCH17: Do you have a history of sexually transmitted diseases (STDs)?"
+        },
+        {
+          "id": "hbc_h_18",
+          "label": "Unsafe Injections",
+          "action": "ask about",
+          "question": "HBCH18: Do you have a history of using unsafe injections?"
+        },
+        {
+          "id": "hbc_h_19",
+          "label": "Family Liver Disease History",
+          "action": "ask about",
+          "question": "HBCH19: Any history of liver disease in your family?"
+        },
+        {
+          "id": "hbc_h_20",
+          "label": "Wife Children Hepatitis",
+          "action": "ask about",
+          "question": "HBCH20: How about your wife or child? Do they have any hepatitis B or C?"
+        },
+        {
+          "id": "hbc_h_21",
+          "label": "Current Medication",
+          "action": "ask about",
+          "question": "HBCH21: Any medications at home currently?"
+        },
+        {
+          "id": "hbc_ce_1",
+          "label": "Alertness",
+          "action": "check",
+          "question": "HBCCE1: Patient is Alert"
+        },
+        {
+          "id": "hbc_ce_2",
+          "label": "Weight",
+          "action": "check",
+          "question": "HBCCE2: Weight"
+        },
+        {
+          "id": "hbc_ce_3",
+          "label": "Height",
+          "action": "check",
+          "question": "HBCCE3: Height"
+        },
+        {
+          "id": "hbc_ce_4",
+          "label": "Extremities",
+          "action": "check",
+          "question": "HBCCE4: Extremities"
+        },
+        {
+          "id": "hbc_ce_5",
+          "label": "Abdominal Exam",
+          "action": "perform",
+          "question": "HBCCE5: Abdominal examination"
+        },
+        {
+          "id": "hbc_lt_1",
+          "label": "Total Bilirubin",
+          "action": "order tests of",
+          "question": "HBCLT1: Total Bilirubin"
+        },
+        {
+          "id": "hbc_lt_2",
+          "label": "AST/ALT",
+          "action": "order tests of",
+          "question": "HBCLT2: AST/ALT"
+        },
+        {
+          "id": "hbc_lt_3",
+          "label": "INR",
+          "action": "order tests of",
+          "question": "HBCLT3: INR"
+        },
+        {
+          "id": "hbc_lt_4",
+          "label": "HBV DNA",
+          "action": "order tests of",
+          "question": "HBCLT4: HBV DNA"
+        },
+        {
+          "id": "hbc_lt_5",
+          "label": "Anti-HCV",
+          "action": "order tests of",
+          "question": "HBCLT5: Anti-HCV"
+        },
+        {
+          "id": "hbc_lt_6",
+          "label": "HIV",
+          "action": "order tests of",
+          "question": "HBCLT6: HIV"
+        },
+        {
+          "id": "hbc_lt_7",
+          "label": "Platelets",
+          "action": "order tests of",
+          "question": "HBCLT7: Platelets"
+        },
+        {
+          "id": "hbc_lt_8",
+          "label": "AFP",
+          "action": "order tests of",
+          "question": "HBCLT8: AFP"
+        },
+        {
+          "id": "hbc_lt_9",
+          "label": "Creatinine",
+          "action": "order tests of",
+          "question": "HBCLT9: Creatinine"
+        },
+        {
+          "id": "hbc_lt_10",
+          "label": "Ultrasound",
+          "action": "order tests of",
+          "question": "HBCLT10: Ultrasound"
+        },
+        {
+          "id": "hbc_lt_11",
+          "label": "Gastroscopy",
+          "action": "order tests of",
+          "question": "HBCLT11:Gastroscopy"
+        },
+        {
+          "id": "hbc_d",
+          "label": "Hepatitis B with Cirrhosis Diagnosis",
+          "action": "",
+          "question": "HBCD: correctly diagnose hepatitis B with decompensated cirrhosis (Child-Pugh Class C)?"
+        },
+        {
+          "id": "hbc_t_1",
+          "label": "Hospital Admission",
+          "action": "prescribe",
+          "question": "HBCT1: Hospital admission"
+        },
+        {
+          "id": "hbc_t_2",
+          "label": "TDF",
+          "action": "prescribe",
+          "question": "HBCT2: Initiate TDF 300 mg/day (CrCl 72.79)"
+        },
+        {
+          "id": "hbc_t_3",
+          "label": "Monitor Side Effects",
+          "action": "mention",
+          "question": "HBCT3: Monitor for side effects (renal, lactic acidosis, osteoporosis)"
+        },
+        {
+          "id": "hbc_t_4",
+          "label": "Improve Cirrhosis Status",
+          "action": "mention",
+          "question": "HBCT4: Improve cirrhosis status and prolong life expectancy"
+        },
+        {
+          "id": "hbc_t_5",
+          "label": "Varices Ligation",
+          "action": "prescribe",
+          "question": "HBCT5: Varices ligation"
+        },
+        {
+          "id": "hbc_t_6",
+          "label": "Propranolol",
+          "action": "prescribe",
+          "question": "HBCT6: Propranolol 40 mg PO daily"
+        },
+        {
+          "id": "hbc_m_1",
+          "label": "Hospitalize",
+          "action": "prescribe",
+          "question": "HBCM1: Hospitalize until ascites and jaundice resolve"
+        },
+        {
+          "id": "hbc_m_2",
+          "label": "Liver Function Monitoring",
+          "action": "prescribe",
+          "question": "HBCM2: Clinical and liver function monitoring every 2 weeks"
+        },
+        {
+          "id": "hbc_m_3",
+          "label": "HBV DNA Routine",
+          "action": "prescribe",
+          "question": "HBCM3: HBV DNA every 6 months"
+        },
+        {
+          "id": "hbc_m_4",
+          "label": "Viral Load Monitoring",
+          "action": "prescribe",
+          "question": "HBCM4: Viral load and Anti-HBe at week 12"
+        },
+        {
+          "id": "hbc_m_5",
+          "label": "Liver Cancer HCC Screening",
+          "action": "prescribe",
+          "question": "HBCM5: Liver cancer/HCC screening every 12-24 weeks"
+        },
+        {
+          "id": "hbc_m_6",
+          "label": "Fibrosis Evaluation",
+          "action": "prescribe",
+          "question": "HBCM6: Fibrosis evaluation every 12-24 weeks"
+        },
+        {
+          "id": "hbc_m_7",
+          "label": "Creatinine Monitoring",
+          "action": "prescribe",
+          "question": "HBCM7: Creatinine monitoring every 6 months"
+        },
+        {
+          "id": "hbc_con_1",
+          "label": "Explain Complications",
+          "action": "",
+          "question": "HBCCON1: Explain hepatitis B, the risk of progression to liver cancer, and bleeding from esophageal varices and other complications"
+        },
+        {
+          "id": "hbc_con_2",
+          "label": "Adherence",
+          "action": "explain",
+          "question": "HBCCON2: Importance of lifelong treatment, adherence, and follow-up"
+        },
+        {
+          "id": "hbc_con_3",
+          "label": "Family Screening Vaccination",
+          "action": "mention",
+          "question": "HBCCON3: Screening and vaccination for family members"
+        },
+        {
+          "id": "hbc_con_4",
+          "label": "Lifestyle Changes",
+          "action": "mention",
+          "question": "HBCCON4: Lifestyle changes (stop alcohol, healthy diet, rest, exercise)"
+        }
+      ]
+    },
+    "hbp": {
+      "items": [
+        {
+          "id": "hbp_h_1",
+          "label": "Hep B Diagnosis Time",
+          "action": "ask about",
+          "question": "HBPH1: When did you find out about hepatitis B?"
+        },
+        {
+          "id": "hbp_h_2",
+          "label": "Hep B Diagnosis How",
+          "action": "ask about",
+          "question": "HBPH2: How do you know about your hepatitis B status?"
+        },
+        {
+          "id": "hbp_h_3",
+          "label": "Other Lab Tests History",
+          "action": "ask about",
+          "question": "HBPH3: Besides HBsAg, are there other laboratory tests, such as liver enzymes or virus count, that you took before?"
+        },
+        {
+          "id": "hbp_h_4",
+          "label": "Antiviral Treatment",
+          "action": "ask about",
+          "question": "HBPH4: Have you received any antiviral treatment?"
+        },
+        {
+          "id": "hbp_h_5",
+          "label": "Symptoms Yes No",
+          "action": "ask about",
+          "question": "HBPH5: Do you experience any symptoms?"
+        },
+        {
+          "id": "hbp_h_6",
+          "label": "Fatigue",
+          "action": "ask about",
+          "question": "HBPH6: Do you have any fatigue?"
+        },
+        {
+          "id": "hbp_h_7",
+          "label": "Appetite Loss",
+          "action": "ask about",
+          "question": "HBPH7: Do you have a loss of appetite?"
+        },
+        {
+          "id": "hbp_h_8",
+          "label": "Yellow Eyes Skin",
+          "action": "ask about",
+          "question": "HBPH8: Have you ever had yellow eyes or skin?"
+        },
+        {
+          "id": "hbp_h_9",
+          "label": "Bleeding",
+          "action": "ask about",
+          "question": "HBPH9: Do you have any bleeding?"
+        },
+        {
+          "id": "hbp_h_10",
+          "label": "Other Health Conditions",
+          "action": "ask about",
+          "question": "HBPH10: Do you have other health conditions or medications?"
+        },
+        {
+          "id": "hbp_h_11",
+          "label": "Pregnancy Condition",
+          "action": "ask about",
+          "question": "HBPH11: How about your current pregnancy condition?"
+        },
+        {
+          "id": "hbp_h_12",
+          "label": "Family Liver History",
+          "action": "ask about",
+          "question": "HBPH12: Is there anyone in your family who has liver disease?"
+        },
+        {
+          "id": "hbp_h_13",
+          "label": "Family Hepatitis Testing",
+          "action": "ask about",
+          "question": "HBPH13: Has your family been tested for hepatitis before?"
+        },
+        {
+          "id": "hbp_h_14",
+          "label": "Hep B Husband and Children",
+          "action": "ask about",
+          "question": "HBPH14: How about the hepatitis B status of your husband and children?"
+        },
+        {
+          "id": "hbp_h_15",
+          "label": "First Preg Viral Tests",
+          "action": "ask about",
+          "question": "HBPH15: In your first pregnancy, did you get any viral tests or other health checks?"
+        },
+        {
+          "id": "hbp_h_16",
+          "label": "HIV Status",
+          "action": "ask about",
+          "question": "HBPH16: Do you know your HIV status?"
+        },
+        {
+          "id": "hbp_h_17",
+          "label": "Syphilis Test",
+          "action": "ask about",
+          "question": "HBPH17: Have you taken a syphilis test?"
+        },
+        {
+          "id": "hbp_h_18",
+          "label": "Alcohol",
+          "action": "ask about",
+          "question": "HBPH18: Do you consume alcohol?"
+        },
+        {
+          "id": "hbp_h_19",
+          "label": "Smoke",
+          "action": "ask about",
+          "question": "HBPH19: Do you smoke?"
+        },
+        {
+          "id": "hbp_ce_1",
+          "label": "Alertness",
+          "action": "check",
+          "question": "HBPCE1: Patient is Alert"
+        },
+        {
+          "id": "hbp_ce_2",
+          "label": "Extremities",
+          "action": "check",
+          "question": "HBPCE2: Extremities"
+        },
+        {
+          "id": "hbp_ce_3",
+          "label": "Abdominal Exam",
+          "action": "perform",
+          "question": "HBPCE3: Abdominal examination"
+        },
+        {
+          "id": "hbp_ce_4",
+          "label": "Fetal Growth",
+          "action": "check",
+          "question": "HBPCE4: Fetal Growth"
+        },
+        {
+          "id": "hbp_lt_1",
+          "label": "PLT",
+          "action": "order tests of",
+          "question": "HBPLT1: PLT"
+        },
+        {
+          "id": "hbp_lt_2",
+          "label": "HGB",
+          "action": "order tests of",
+          "question": "HBPLT2: HGB"
+        },
+        {
+          "id": "hbp_lt_3",
+          "label": "HBeAg",
+          "action": "order tests of",
+          "question": "HBPLT3: HBeAg"
+        },
+        {
+          "id": "hbp_lt_4",
+          "label": "HBV DNA",
+          "action": "order tests of",
+          "question": "HBPLT4: HBV DNA"
+        },
+        {
+          "id": "hbp_lt_5",
+          "label": "Anti-HCV",
+          "action": "order tests of",
+          "question": "HBPLT5: Anti-HCV"
+        },
+        {
+          "id": "hbp_lt_6",
+          "label": "HIV",
+          "action": "order tests of",
+          "question": "HBPLT6: HIV"
+        },
+        {
+          "id": "hbp_lt_7",
+          "label": "Ultrasound",
+          "action": "order tests of",
+          "question": "HBPLT7: Ultrasound"
+        },
+        {
+          "id": "hbp_d",
+          "label": "Hepatitis B in Pregnancy Diagnosis",
+          "action": "",
+          "question": "HBPD: correctly diagnose chronic hepatitis B without fibrosis?"
+        },
+        {
+          "id": "hbp_t_1",
+          "label": "Outpatient",
+          "action": "prescribe",
+          "question": "HBPT1: Manage in outpatient care"
+        },
+        {
+          "id": "hbp_t_2",
+          "label": "Antiviral",
+          "action": "prescribe",
+          "question": "HBPT2: Antiviral treatment"
+        },
+        {
+          "id": "hbp_t_3",
+          "label": "Prophylaxis",
+          "action": "prescribe",
+          "question": "HBPT3: Prophylaxis"
+        },
+        {
+          "id": "hbp_m_1",
+          "label": "Mother",
+          "action": "prescribe",
+          "question": "HBPM1: Mother -- re-evaluate 3 months after delivery or earlier if symptoms occur"
+        },
+        {
+          "id": "hbp_m_2",
+          "label": "Baby1",
+          "action": "prescribe",
+          "question": "HBPM2: Baby -- HBV vaccine and HBIG within 24 hours after birth"
+        },
+        {
+          "id": "hbp_m_3",
+          "label": "Baby2",
+          "action": "prescribe",
+          "question": "HBPM3: Baby -- 3 HBV doses in Expanded Program on immunization (EPI)"
+        },
+        {
+          "id": "hbp_m_4",
+          "label": "Baby3",
+          "action": "prescribe",
+          "question": "HBPM4: Baby -- HBsAg and anti-HBs from month 7"
+        },
+        {
+          "id": "hbp_con_1",
+          "label": "Explain Monitoring",
+          "action": "mention",
+          "question": "HBPCON1: Explain the current disease status and the need for monitoring"
+        },
+        {
+          "id": "hbp_con_2",
+          "label": "Infant Protection Protocol",
+          "action": "mention",
+          "question": "HBPCON2: Infant protection protocol"
+        },
+        {
+          "id": "hbp_con_3",
+          "label": "Family Testing",
+          "action": "mention",
+          "question": "HBPCON3: Encourage family testing"
+        },
+        {
+          "id": "hbp_con_4",
+          "label": "Breasfeeding Safe",
+          "action": "mention",
+          "question": "HBPCON4: Breastfeeding is safe"
+        },
+        {
+          "id": "hbp_con_5",
+          "label": "Disclose Status",
+          "action": "mention",
+          "question": "HBPCON5: Choose to disclose status if desired"
+        }
+      ]
+    },
+    "hbv": {
+      "items": [
+        {
+          "id": "hbv_h_1",
+          "label": "Hepatitis Diagnosis Begin",
+          "action": "ask about",
+          "question": "HBNH1: When did you find out about hepatitis B?"
+        },
+        {
+          "id": "hbv_h_2",
+          "label": "Hepatitis Status Knowledge",
+          "action": "ask about",
+          "question": "HBNH2: How do you know about your hepatitis B status?"
+        },
+        {
+          "id": "hbv_h_3",
+          "label": "Other Tests History",
+          "action": "ask about",
+          "question": "HBNH3: Besides HBsAg, are there other laboratory tests that you took before?"
+        },
+        {
+          "id": "hbv_h_4",
+          "label": "Antiviral Treatment",
+          "action": "ask about",
+          "question": "HBNH4: Have you received any antiviral treatment?"
+        },
+        {
+          "id": "hbv_h_5",
+          "label": "Current Symptoms",
+          "action": "ask about",
+          "question": "HBNH5: Do you currently experience any symptoms?"
+        },
+        {
+          "id": "hbv_h_6",
+          "label": "Fatigue",
+          "action": "ask about",
+          "question": "HBNH6: Do you have any fatigue?"
+        },
+        {
+          "id": "hbv_h_7",
+          "label": "Appetite Loss",
+          "action": "ask about",
+          "question": "HBNH7: Do you have a loss of appetite?"
+        },
+        {
+          "id": "hbv_h_8",
+          "label": "Yellow Eyes Skin",
+          "action": "ask about",
+          "question": "HBNH8: Do you have yellow eyes or skin?"
+        },
+        {
+          "id": "hbv_h_9",
+          "label": "Bleeding",
+          "action": "ask about",
+          "question": "HBNH9: Do you have any bleeding?"
+        },
+        {
+          "id": "hbv_h_10",
+          "label": "Other Health Condition",
+          "action": "ask about",
+          "question": "HBNH10: Do you have other health conditions?"
+        },
+        {
+          "id": "hbv_h_11",
+          "label": "Family Liver History",
+          "action": "ask about",
+          "question": "HBNH11: Is there anyone in your family who has liver disease?"
+        },
+        {
+          "id": "hbv_h_12",
+          "label": "Family Testing History",
+          "action": "ask about",
+          "question": "HBNH12: Has your family been tested for hepatitis before?"
+        },
+        {
+          "id": "hbv_h_13",
+          "label": "Family HCC History",
+          "action": "ask about",
+          "question": "HBNH13: Has your mother or anyone else in your family been diagnosed with HCC?"
+        },
+        {
+          "id": "hbv_h_14",
+          "label": "Hepatitis B Wife Children",
+          "action": "ask about",
+          "question": "HBNH14: How about the hepatitis B status of your wife and children?"
+        },
+        {
+          "id": "hbv_h_15",
+          "label": "HIV Status",
+          "action": "ask about",
+          "question": "HBNH15: Do you know your HIV status?"
+        },
+        {
+          "id": "hbv_h_16",
+          "label": "HCV Status",
+          "action": "ask about",
+          "question": "HBNH16: Do you know your HCV status?"
+        },
+        {
+          "id": "hbv_h_17",
+          "label": "Current Medication",
+          "action": "ask about",
+          "question": "HBNH17: Are you taking any medications?"
+        },
+        {
+          "id": "hbv_h_18",
+          "label": "Smoke Drink",
+          "action": "ask about",
+          "question": "HBNH18: Do you smoke or drink?"
+        },
+        {
+          "id": "hbv_h_19",
+          "label": "Injection Drugs",
+          "action": "ask about",
+          "question": "HBNH19: Do you ever use any injection drugs?"
+        },
+        {
+          "id": "hbv_h_20",
+          "label": "STD",
+          "action": "ask about",
+          "question": "HBNH20: Do you have any history of sexually transmitted diseases (STDs)?"
+        },
+        {
+          "id": "hbv_h_21",
+          "label": "Risky Behavior",
+          "action": "ask about",
+          "question": "HBNH21: Do you have a history of any risky behaviour?"
+        },
+        {
+          "id": "hbv_ce_1",
+          "label": "Alertness",
+          "action": "check",
+          "question": "HBNCE1: Patient is Alert"
+        },
+        {
+          "id": "hbv_ce_2",
+          "label": "Extremities",
+          "action": "check",
+          "question": "HBNCE2: Extremities"
+        },
+        {
+          "id": "hbv_ce_3",
+          "label": "Abdominal Exam",
+          "action": "order",
+          "question": "HBNCE3: Abdominal examination"
+        },
+        {
+          "id": "hbv_lt_1",
+          "label": "PLT",
+          "action": "order tests of",
+          "question": "HBNLT1: PLT"
+        },
+        {
+          "id": "hbv_lt_2",
+          "label": "HGB",
+          "action": "order tests of",
+          "question": "HBNLT2: HGB"
+        },
+        {
+          "id": "hbv_lt_3",
+          "label": "HBeAg",
+          "action": "order tests of",
+          "question": "HBNLT3: HBeAg"
+        },
+        {
+          "id": "hbv_lt_4",
+          "label": "HBV DNA",
+          "action": "order tests of",
+          "question": "HBNLT4: HBV DNA"
+        },
+        {
+          "id": "hbv_lt_5",
+          "label": "AST/ALT",
+          "action": "order tests of",
+          "question": "HBNLT5: AST/ALT"
+        },
+        {
+          "id": "hbv_lt_6",
+          "label": "Ultrasound",
+          "action": "order tests of",
+          "question": "HBNLT6: Ultrasound"
+        },
+        {
+          "id": "hbv_d",
+          "label": "Hepatitis B Not Eligible for Treatment Diagnosis",
+          "action": "",
+          "question": "HBND: correctly diagnose chronic hepatitis B without fibrosis?"
+        },
+        {
+          "id": "hbv_t_1",
+          "label": "Treatment Eligibility",
+          "action": "",
+          "question": "HBNT1: Did the provider prescribe treatments?"
+        },
+        {
+          "id": "hbv_t_2",
+          "label": "Additional Tests",
+          "action": "",
+          "question": "HBNT2: Did the provider prescribe additional tests?"
+        },
+        {
+          "id": "hbv_m_1",
+          "label": "Follow up",
+          "action": "mention",
+          "question": "HBNM1: Follow up every 6-12 months"
+        },
+        {
+          "id": "hbv_m_2",
+          "label": "Exams",
+          "action": "mention",
+          "question": "HBNM2: Clinical exam, LFTs, fibrosis, HBV DNA, and HBeAg"
+        },
+        {
+          "id": "hbv_con_1",
+          "label": "Explain No Treatment",
+          "action": "mention",
+          "question": "HBNCON1: Disease is stable, no treatment needed"
+        },
+        {
+          "id": "hbv_con_2",
+          "label": "Regular Monitoring",
+          "action": "mention",
+          "question": "HBNCON2: Importance of regular monitoring"
+        },
+        {
+          "id": "hbv_con_3",
+          "label": "Screen Family",
+          "action": "mention",
+          "question": "HBNCON3: Screen family"
+        },
+        {
+          "id": "hbv_con_4",
+          "label": "Healthy Lifestyle",
+          "action": "mention",
+          "question": "HBNCON4: Avoid alcohol and live a healthy lifestyle"
+        }
+      ]
+    },
+    "hcv": {
+      "items": [
+        {
+          "id": "hcv_h_1",
+          "label": "Symptom Duration",
+          "action": "ask about",
+          "question": "HCH1: How long have you been experiencing these symptoms?"
+        },
+        {
+          "id": "hcv_h_2",
+          "label": "All Symptoms",
+          "action": "ask about",
+          "question": "HCH2: What symptoms have you noticed?"
+        },
+        {
+          "id": "hcv_h_3",
+          "label": "Shortness of Breath",
+          "action": "ask about",
+          "question": "HCH3: Do you have shortness of breath?"
+        },
+        {
+          "id": "hcv_h_4",
+          "label": "Yellow Eyes Skin",
+          "action": "ask about",
+          "question": "HCH4: Do your skin or eyes become yellow?"
+        },
+        {
+          "id": "hcv_h_5",
+          "label": "Urine Color",
+          "action": "ask about",
+          "question": "HCH5: How about your urine color?"
+        },
+        {
+          "id": "hcv_h_6",
+          "label": "Leg Swelling",
+          "action": "ask about",
+          "question": "HCH6: Do you have leg swelling?"
+        },
+        {
+          "id": "hcv_h_7",
+          "label": "Fever",
+          "action": "ask about",
+          "question": "HCH7: Do you have a fever?"
+        },
+        {
+          "id": "hcv_h_8",
+          "label": "Chronic Illness History",
+          "action": "ask about",
+          "question": "HCH8: Do you have any history of chronic illnesses or medications?"
+        },
+        {
+          "id": "hcv_h_9",
+          "label": "Blood Transfusion or Surgery",
+          "action": "ask about",
+          "question": "HCH9: Any history of blood transfusions or surgeries?"
+        },
+        {
+          "id": "hcv_h_10",
+          "label": "Traditional Medicine",
+          "action": "ask about",
+          "question": "HCH10: Have you used traditional or herbal medicine for your current symptoms?"
+        },
+        {
+          "id": "hcv_h_11",
+          "label": "Family Testing History",
+          "action": "ask about",
+          "question": "HCH11: Have your family members been tested with Hepatitis?"
+        },
+        {
+          "id": "hcv_h_12",
+          "label": "Liver Disease History",
+          "action": "ask about",
+          "question": "HCH12: Do you have any past history of liver disease?"
+        },
+        {
+          "id": "hcv_h_13",
+          "label": "Antiviral Treatment",
+          "action": "ask about",
+          "question": "HCH13: Did you get antiviral treatment?"
+        },
+        {
+          "id": "hcv_h_14",
+          "label": "Laboratory Tests History",
+          "action": "ask about",
+          "question": "HCH14: For your current condition, have you taken any previous laboratory tests?"
+        },
+        {
+          "id": "hcv_h_15",
+          "label": "Hepatitis B Vaccination",
+          "action": "ask about",
+          "question": "HCH15: Have you been vaccinated against Hepatitis B?"
+        },
+        {
+          "id": "hcv_h_16",
+          "label": "Family Liver History",
+          "action": "ask about",
+          "question": "HCH16: Do you have any family members who have liver disease?"
+        },
+        {
+          "id": "hcv_h_17",
+          "label": "Alcohol or Smoke",
+          "action": "ask about",
+          "question": "HCH17: Do you drink alcohol or smoke?"
+        },
+        {
+          "id": "hcv_h_18",
+          "label": "Hepatitis B Status",
+          "action": "ask about",
+          "question": "HCH18: Do you know your hepatitis B status?"
+        },
+        {
+          "id": "hcv_h_19",
+          "label": "HIV Status",
+          "action": "ask about",
+          "question": "HCH19: Do you know your HIV status?"
+        },
+        {
+          "id": "hcv_h_20",
+          "label": "Unsafe Injections",
+          "action": "ask about",
+          "question": "HCH20: Do you have a history of using unsafe injections?"
+        },
+        {
+          "id": "hcv_ce_1",
+          "label": "Alertness",
+          "action": "check",
+          "question": "HCCE1: Patient is Alert"
+        },
+        {
+          "id": "hcv_ce_2",
+          "label": "Extremities",
+          "action": "check",
+          "question": "HCCE2: Extremities"
+        },
+        {
+          "id": "hcv_ce_3",
+          "label": "Abdominal Exam",
+          "action": "check",
+          "question": "HCCE3: Abdominal examination"
+        },
+        {
+          "id": "hcv_lt_1",
+          "label": "PLT",
+          "action": "order tests of",
+          "question": "HCLT1: PLT"
+        },
+        {
+          "id": "hcv_lt_2",
+          "label": "HGB",
+          "action": "order tests of",
+          "question": "HCLT2: HGB"
+        },
+        {
+          "id": "hcv_lt_3",
+          "label": "HBeAg",
+          "action": "order tests of",
+          "question": "HCLT3: HBeAg"
+        },
+        {
+          "id": "hcv_lt_4",
+          "label": "HCV RNA",
+          "action": "order tests of",
+          "question": "HCLT4: HCV RNA"
+        },
+        {
+          "id": "hcv_lt_5",
+          "label": "AST/ALT/GGT",
+          "action": "order tests of",
+          "question": "HCLT5: AST/ALT/GGT"
+        },
+        {
+          "id": "hcv_lt_6",
+          "label": "Ultrasound",
+          "action": "order tests of",
+          "question": "HCLT6: Ultrasound"
+        },
+        {
+          "id": "hcv_lt_7",
+          "label": "Bilirubin",
+          "action": "order tests of",
+          "question": "HCLT7: Bilirubin"
+        },
+        {
+          "id": "hcv_lt_8",
+          "label": "Albumin",
+          "action": "order tests of",
+          "question": "HCLT8: Albumin"
+        },
+        {
+          "id": "hcv_lt_9",
+          "label": "Anti-HCV",
+          "action": "order tests of",
+          "question": "HCLT9: Anti-HCV"
+        },
+        {
+          "id": "hcv_lt_10",
+          "label": "Anti-HBV",
+          "action": "order tests of",
+          "question": "HCLT10: Anti-HBV"
+        },
+        {
+          "id": "hcv_lt_11",
+          "label": "HIV",
+          "action": "order tests of",
+          "question": "HCLT11: HIV"
+        },
+        {
+          "id": "hcv_d",
+          "label": "Hepatitis C Diagnosis",
+          "action": "",
+          "question": "HCD: correctly diagnose Chronic HCV with advanced fibrosis (F3), without cirrhosis and without co-infections?"
+        },
+        {
+          "id": "hcv_t_1",
+          "label": "DAA Therapy",
+          "action": "prescribe",
+          "question": "HCT1: Eligible for DAA therapy: SOF/VEL or SOF+DAC for 12 weeks"
+        },
+        {
+          "id": "hcv_t_2",
+          "label": "Outpatient",
+          "action": "prescribe",
+          "question": "HCT2: Outpatient treatment"
+        },
+        {
+          "id": "hcv_m_1",
+          "label": "LFTs, CBC",
+          "action": "prescribe",
+          "question": "HCM1: After 1 month: LFTs, CBC"
+        },
+        {
+          "id": "hcv_m_2",
+          "label": "SVR12",
+          "action": "prescribe",
+          "question": "HCM2: SVR12: HCV RNA, fibrosis, AFP, ultrasound, LFT, CBC"
+        },
+        {
+          "id": "hcv_m_3",
+          "label": "HCC Screening",
+          "action": "prescribe",
+          "question": "HCM3: Screen for HCC every 6 months after SVR 12 evaluation (as he has F3 fibrosis)"
+        },
+        {
+          "id": "hcv_con_1",
+          "label": "Explain HCV",
+          "action": "mention",
+          "question": "HCCON1: Explain the disease, purpose, and benefits of treatment"
+        },
+        {
+          "id": "hcv_con_2",
+          "label": "Adherence",
+          "action": "mention",
+          "question": "HCCON2: Importance of adherence and side effect awareness"
+        },
+        {
+          "id": "hcv_con_3",
+          "label": "Prevent Reinfection",
+          "action": "mention",
+          "question": "HCCON3: Prevent reinfection"
+        },
+        {
+          "id": "hcv_con_4",
+          "label": "Screen Spouse and Child",
+          "action": "mention",
+          "question": "HCCON4: Screen spouse and child"
+        },
+        {
+          "id": "hcv_con_5",
+          "label": "Awareness",
+          "action": "mention",
+          "question": "HCCON5: Importance of seeking health services earlier and awareness of utilizing unstandardized traditional medicine"
+        }
+      ]
+    },
+    "arv": {
+      "items": [
+        {
+          "id": "arv_h_1",
+          "label": "Recent Symptoms",
+          "action": "ask about",
+          "question": "HCAH1: Have you had any symptoms recently?"
+        },
+        {
+          "id": "arv_h_2",
+          "label": "Symptom Begin",
+          "action": "ask about",
+          "question": "HCAH2: Since when have you experienced those symptoms?"
+        },
+        {
+          "id": "arv_h_3",
+          "label": "Fever",
+          "action": "ask about",
+          "question": "HCAH3: Do you experience a fever?"
+        },
+        {
+          "id": "arv_h_4",
+          "label": "Leg Edema",
+          "action": "ask about",
+          "question": "HCAH4: Do you experience leg edema?"
+        },
+        {
+          "id": "arv_h_5",
+          "label": "Bleeding",
+          "action": "ask about",
+          "question": "HCAH5: Do you experience bleeding?"
+        },
+        {
+          "id": "arv_h_6",
+          "label": "Urine Color",
+          "action": "ask about",
+          "question": "HCAH6: How about your urine color?"
+        },
+        {
+          "id": "arv_h_7",
+          "label": "Appetite",
+          "action": "ask about",
+          "question": "HCAH7: How about your appetite?"
+        },
+        {
+          "id": "arv_h_8",
+          "label": "Diarrhea",
+          "action": "ask about",
+          "question": "HCAH8: Do you have diarrhea?"
+        },
+        {
+          "id": "arv_h_9",
+          "label": "Productive Cough",
+          "action": "ask about",
+          "question": "HCAH9: Do you have a chronic productive cough?"
+        },
+        {
+          "id": "arv_h_10",
+          "label": "ARV Treatment Begin",
+          "action": "ask about",
+          "question": "HCAH10: Since when have you been taking ARV treatment?"
+        },
+        {
+          "id": "arv_h_11",
+          "label": "Regimen",
+          "action": "ask about",
+          "question": "HCAH11: What regimen that you take?"
+        },
+        {
+          "id": "arv_h_12",
+          "label": "HIV Treatment",
+          "action": "ask about",
+          "question": "HCAH12: Are you taking your HIV treatment regularly?"
+        },
+        {
+          "id": "arv_h_13",
+          "label": "Liver Disease History",
+          "action": "ask about",
+          "question": "HCAH13: Do you have a history of liver disease?"
+        },
+        {
+          "id": "arv_h_14",
+          "label": "Other Tests History",
+          "action": "ask about",
+          "question": "HCAH14: Besides that, did you take other laboratory tests such as an HCV RNA test?"
+        },
+        {
+          "id": "arv_h_15",
+          "label": "Antiviral or Hepatitis Medication",
+          "action": "ask about",
+          "question": "HCAH15: Did you take any antiviral or hepatitis medication?"
+        },
+        {
+          "id": "arv_h_16",
+          "label": "Alcohol",
+          "action": "ask about",
+          "question": "HCAH16: Do you drink alcohol?"
+        },
+        {
+          "id": "arv_h_17",
+          "label": "Injection Drugs",
+          "action": "ask about",
+          "question": "HCAH17: Do you have a history of using injection drugs?"
+        },
+        {
+          "id": "arv_h_18",
+          "label": "Family Liver History",
+          "action": "ask about",
+          "question": "HCAH18: Do you have any family members with a history of liver cancer or Hepatitis B, or C?"
+        },
+        {
+          "id": "arv_h_19",
+          "label": "Family Hepatitis Testing",
+          "action": "ask about",
+          "question": "HCAH19: Have your family members been tested for hepatitis?"
+        },
+        {
+          "id": "arv_ce_1",
+          "label": "Alertness",
+          "action": "check",
+          "question": "HCACE1: Patient is Alert"
+        },
+        {
+          "id": "arv_ce_2",
+          "label": "Extremities",
+          "action": "check",
+          "question": "HCACE2: Extremities"
+        },
+        {
+          "id": "arv_ce_3",
+          "label": "Abdominal Exam",
+          "action": "check",
+          "question": "HCACE3: Abdominal examination"
+        },
+        {
+          "id": "arv_lt_1",
+          "label": "PLT",
+          "action": "order tests of",
+          "question": "HCALT1: PLT"
+        },
+        {
+          "id": "arv_lt_2",
+          "label": "HGB",
+          "action": "order tests of",
+          "question": "HCALT2: HGB"
+        },
+        {
+          "id": "arv_lt_3",
+          "label": "HBeAg",
+          "action": "order tests of",
+          "question": "HCALT3: HBeAg"
+        },
+        {
+          "id": "arv_lt_4",
+          "label": "HCV RNA",
+          "action": "order tests of",
+          "question": "HCALT4: HCV RNA"
+        },
+        {
+          "id": "arv_lt_5",
+          "label": "AST/ALT/GGT",
+          "action": "order tests of",
+          "question": "HCALT5: AST/ALT/GGT"
+        },
+        {
+          "id": "arv_lt_6",
+          "label": "Bilirubin",
+          "action": "order tests of",
+          "question": "HCALT6: Bilirubin"
+        },
+        {
+          "id": "arv_lt_7",
+          "label": "Albumin",
+          "action": "order tests of",
+          "question": "HCALT7: Albumin"
+        },
+        {
+          "id": "arv_lt_8",
+          "label": "CD4",
+          "action": "order tests of",
+          "question": "HCALT8: CD4"
+        },
+        {
+          "id": "arv_lt_9",
+          "label": "Creatinine",
+          "action": "order tests of",
+          "question": "HCALT9: Creatinine"
+        },
+        {
+          "id": "arv_lt_10",
+          "label": "HIV RNA",
+          "action": "order tests of",
+          "question": "HCALT10: HIV RNA"
+        },
+        {
+          "id": "arv_lt_11",
+          "label": "Ultrasound",
+          "action": "order tests of",
+          "question": "HCALT11: Ultrasound"
+        },
+        {
+          "id": "arv_d",
+          "label": "Hepatitis C with ARV Diagnosis",
+          "action": "",
+          "question": "HCAD: correctly diagnose Chronic viremic HCV infection, co-infected with HBV and HIV, compensated liver cirrhosis?"
+        },
+        {
+          "id": "arv_t_1",
+          "label": "Continue ART",
+          "action": "prescribe",
+          "question": "HCAT1: Continue ART (switch from TDF/3TC/EFV to TDF/3TC/DTG (TLD) regimen)"
+        },
+        {
+          "id": "arv_t_2",
+          "label": "Begin SOF + DAC",
+          "action": "prescribe",
+          "question": "HCAT2: Begin SOF + DAC x 24 weeks"
+        },
+        {
+          "id": "arv_m_1",
+          "label": "LFTs, CBC, Creatinine",
+          "action": "prescribe",
+          "question": "HCAM1: 4-week follow-up: LFTs, CBC, creatinine"
+        },
+        {
+          "id": "arv_m_2",
+          "label": "SVR12",
+          "action": "prescribe",
+          "question": "HCAM2: SVR12 testing after 12 weeks post-treatment"
+        },
+        {
+          "id": "arv_m_3",
+          "label": "HCC Screening",
+          "action": "prescribe",
+          "question": "HCAM3: Continue HCC screening every 6 months"
+        },
+        {
+          "id": "arv_con_1",
+          "label": "Explain Condition",
+          "action": "",
+          "question": "HCACON1: Explain the disease, purpose, and benefits of treatment"
+        },
+        {
+          "id": "arv_con_2",
+          "label": "Adherence",
+          "action": "mention",
+          "question": "HCACON2: Importance of adherence to ARV and DAA"
+        },
+        {
+          "id": "arv_con_3",
+          "label": "Monitor Side Effects",
+          "action": "mention",
+          "question": "HCACON3: Monitor for interactions and side effects"
+        },
+        {
+          "id": "arv_con_4",
+          "label": "Family Testing",
+          "action": "",
+          "question": "HCACON4: Encourage partner and family testing"
+        },
+        {
+          "id": "arv_con_5",
+          "label": "Healthy Lifestyle",
+          "action": "",
+          "question": "HCACON5: Emphasize a healthy lifestyle and prevention of reinfection"
+        }
+      ]
+    }
+  },
+  "common": {
+    "items": [
+      {
+        "id": "ce_1",
+        "label": "Temperature",
+        "action": "examine",
+        "question": "CE1: Temperature"
+      },
+      {
+        "id": "ce_2",
+        "label": "Blood Pressure",
+        "action": "examine",
+        "question": "CE2: Blood Pressure"
+      },
+      {
+        "id": "ce_3",
+        "label": "Pulse",
+        "action": "examine",
+        "question": "CE3: Pulse"
+      },
+      {
+        "id": "ce_4",
+        "label": "Respiration",
+        "action": "examine",
+        "question": "CE4: Respiration"
+      },
+      {
+        "id": "ce_5",
+        "label": "Pulse Oximeter",
+        "action": "examine",
+        "question": "CE5: Pulse Oximeter"
+      },
+      {
+        "id": "ce_6",
+        "label": "Head and Neck",
+        "action": "examine",
+        "question": "CE6: Head and Neck"
+      },
+      {
+        "id": "ce_7",
+        "label": "Respiratory Exam",
+        "action": "examine",
+        "question": "CE7: Respiratory Exam"
+      },
+      {
+        "id": "med_1",
+        "label": "Homeopathic",
+        "action": "prescribe",
+        "question": "MED1: Homeopathic"
+      },
+      {
+        "id": "med_2",
+        "label": "Antibiotics",
+        "action": "prescribe",
+        "question": "MED2: Antibiotics"
+      },
+      {
+        "id": "med_3",
+        "label": "Analgesics",
+        "action": "prescribe",
+        "question": "MED3: Analgesics"
+      },
+      {
+        "id": "med_4",
+        "label": "Anti-Ulcer",
+        "action": "prescribe",
+        "question": "MED4: Anti-Ulcer"
+      },
+      {
+        "id": "med_5",
+        "label": "Steroids",
+        "action": "prescribe",
+        "question": "MED5: Steroids"
+      },
+      {
+        "id": "med_6",
+        "label": "Anti-Allergy",
+        "action": "prescribe",
+        "question": "MED6: Anti-Allergy"
+      },
+      {
+        "id": "med_7",
+        "label": "Cardiac",
+        "action": "prescribe",
+        "question": "MED7: Cardiac"
+      },
+      {
+        "id": "med_8",
+        "label": "Psychiatric/Neural",
+        "action": "prescribe",
+        "question": "MED8: Psychiatric/Neural"
+      },
+      {
+        "id": "med_9",
+        "label": "Household Remedy",
+        "action": "prescribe",
+        "question": "MED9: Household Remedy"
+      },
+      {
+        "id": "med_10",
+        "label": "NSAID",
+        "action": "prescribe",
+        "question": "MED10: NSAID"
+      },
+      {
+        "id": "med_11",
+        "label": "Cough Syrup",
+        "action": "prescribe",
+        "question": "MED11: Cough Syrup"
+      },
+      {
+        "id": "med_12",
+        "label": "Bronchodilator",
+        "action": "prescribe",
+        "question": "MED12: Bronchodilator"
+      }
+    ]
+  }
+}
