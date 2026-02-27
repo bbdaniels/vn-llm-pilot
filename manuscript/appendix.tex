@@ -1,9 +1,10 @@
-% AER-Article.tex for AEA last revised 22 June 2011
+% S1 Appendix — Supporting Information
+% Large language models for self-administered clinical vignette assessment
 \documentclass{article}
 
-\usepackage{natbib}
-\usepackage[]{booktabs}
-\usepackage[]{tabularx}
+\usepackage[numbers]{natbib}
+\usepackage{booktabs}
+\usepackage{tabularx}
 \usepackage{graphicx}
 \usepackage{ragged2e}
 \usepackage[table,xcdraw]{xcolor}
@@ -12,33 +13,78 @@
 \usepackage[margin=1in,footskip=0.25in]{geometry}
 \usepackage{setspace}
   \doublespacing
+\usepackage{pdfpages}
 
 \begin{document}
 
-\title{Online Appendices:\\Large Language Models for Clinical Vignette Assessment}
-\author{Benjamin Daniels, Wenhui Zhang, Huyen Nguyen, and Thuy Duong}
+\title{S1 Appendix:\\Large language models for self-administered clinical vignette assessment: a pilot and validation study in Vietnam}
+\author{Benjamin Daniels, Wenjia (Stella) Zhang, Hoang Nguyen, and David Duong}
 
-\date{\today}
+\date{}
 \maketitle
+
+\newpage
 \tableofcontents
 \newpage
 
-\appendix
+%% ————————————————————————————————
+%% A: CLINICAL CASE SCENARIOS
+%% ————————————————————————————————
 
-\section{Clinical Case Scenarios}\label{app:cases}
+\section{Clinical case scenarios and essential diagnostic checklists}\label{app:cases}
 
-[Clinical case scenarios and system prompts to be added.]
-
-\section{Essential Diagnostics Checklists}\label{app:checklists}
-
-[Full checklists for each case to be added.]
-
-\section{Supplementary Tables and Figures}\label{app:supplementary}
-
-[Supplementary results to be added.]
+The following pages contain the full clinical case scenario descriptions for all ten vignettes used in the study. Each case includes the patient background, chief complaint and history of present illness, medical and social history, the standardized opening statement, the full list of provider questions with pre-scripted standardized patient responses, clinical examination findings, laboratory test results, the preliminary diagnosis, recommended treatment, and counseling points. These scenarios were developed by expert clinicians on the research team and used as system prompts for the LLM-based chatbot to achieve standardized patient behavior across interactions.
 
 \newpage
-\bibliographystyle{apalike}
-\bibliography{sample}
+\includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{appendix/vignette-descriptions.pdf}
+
+%% ————————————————————————————————
+%% B: SUPPLEMENTARY TABLES
+%% ————————————————————————————————
+
+\newpage
+\section{Supplementary tables}\label{app:tables}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{appendix/validation-table1.png}
+  \caption*{\textbf{Table S1. Case scenarios and realism ratings.} Each row shows the case condition, opening statement, recommended treatment and counseling points, and mean realism ratings (1--5 scale) from the focus group across four dimensions: overall realism, realism given diagnosis, patient social background, and case easiness. The final column indicates the number of focus group interactions per case.}
+  \label{tab:s1}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{appendix/validation-table2.png}
+  \caption*{\textbf{Table S2. Summary of provider performance by case.} For each clinical case, the table shows the number of providers who completed that case, mean completion of the essential diagnostic checklist (\%, with 95\% CI), proportion of correct diagnoses (\%, with 95\% CI), and mean diagnostic interaction duration in minutes (with 95\% CI).}
+  \label{tab:s2}
+\end{figure}
+
+%% ————————————————————————————————
+%% C: FOCUS GROUP SUPPLEMENTARY RESULTS
+%% ————————————————————————————————
+
+\newpage
+\section{Focus group supplementary results}\label{app:fgd}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.85\textwidth]{appendix/fgd-realism-condition.png}
+  \caption*{\textbf{Figure S1. Average realism rating by condition and feedback question.} Mean ratings (1--5 scale) with 95\% confidence intervals are shown for each of six conditions completed in the focus group, across four feedback dimensions: overall realism, realism given diagnosis, realism of patient social background, and case easiness.}
+  \label{fig:s1}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.75\textwidth]{appendix/fgd-duration.png}
+  \caption*{\textbf{Figure S2. Average case duration by condition in the focus group.} Mean duration in minutes with 95\% confidence intervals for each condition. Hepatitis and hypertension cases tended to take longer, while tuberculosis cases were completed fastest.}
+  \label{fig:s2}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.85\textwidth]{appendix/fgd-realism-feedback.png}
+  \caption*{\textbf{Figure S3. Distribution of focus group realism ratings by feedback question.} Percentage of all ratings at each level (1--5) across four dimensions. Ratings were concentrated at 3--4, with the majority at 4, indicating generally positive perceptions of realism across all dimensions.}
+  \label{fig:s3}
+\end{figure}
 
 \end{document}
