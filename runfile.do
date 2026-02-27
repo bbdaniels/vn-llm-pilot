@@ -21,12 +21,17 @@ if 0 {
 }
 
 // Step 4: Classify transcripts against clinical rubric (Python/Claude)
-if 1 {
+if 0 {
   !python3 "${folder}/code/classify.py"
 }
 
-// Step 5: Data construction and analysis
-if 0 {
+// Step 5: Compile scores (merge Claude + human + expert data)
+if 1 {
+  !python3 "${folder}/code/compile.py"
+}
+
+// Step 6: Data construction and analysis
+if 1 {
   do "${folder}/code/5_data-construct.do"
 }
 

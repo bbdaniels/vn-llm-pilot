@@ -1,35 +1,35 @@
-import excel "${folder}/data/pilot-compiled-scores.xlsx" , clear first sheet("All_Scores")
+//
+// Figure 2: Validation panel (expert ratings, LLM coding, MCQ vs human checklist)
 
-drop if name == ""
-drop H
+use "${folder}/data/compiled-scores.dta" , clear
 
-tw (lfitci expert1_chat human_chat_perc_checklist , lc(black) lw(thick) alw(none)) ///
-  (scatter expert1_chat human_chat_perc_checklist, m(X) jitter(5) mfc(black) mlc(black)) ///
+tw (lfitci expert1 human_pct , lc(black) lw(thick) alw(none)) ///
+  (scatter expert1 human_pct, m(X) jitter(5) mfc(black) mlc(black)) ///
    , legend(off) title("A: Expert Rating (Original Vietnamese)") ///
      xlab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid) ylab(,nogrid) ///
      xtit("Essential Diagnostics (Human Coded)")
 
      graph save "${folder}/temp/f2_1.gph" , replace
 
-tw (lfitci expert2_chat human_chat_perc_checklist , lc(black) lw(thick) alw(none)) ///
-  (scatter expert2_chat human_chat_perc_checklist, m(X) jitter(5) mfc(black) mlc(black)) ///
+tw (lfitci expert2 human_pct , lc(black) lw(thick) alw(none)) ///
+  (scatter expert2 human_pct, m(X) jitter(5) mfc(black) mlc(black)) ///
   , legend(off) title("B: Expert Rating (Translated English)") ///
     xlab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid) ylab(,nogrid) ///
     xtit("Essential Diagnostics (Human Coded)")
 
     graph save "${folder}/temp/f2_2.gph" , replace
 
-tw (lfitci llm_chat_perc_checklist human_chat_perc_checklist , lc(black) lw(thick) alw(none)) ///
-  (scatter llm_chat_perc_checklist human_chat_perc_checklist if llm_chat_perc_checklist <40, m(X) mfc(black) mlc(black)) ///
-  , legend(off) title("C: Essential Diagnostics (LLM Coded)") ///
+tw (lfitci claude_pct human_pct , lc(black) lw(thick) alw(none)) ///
+  (scatter claude_pct human_pct, m(X) mfc(black) mlc(black)) ///
+  , legend(off) title("C: Essential Diagnostics (Claude Coded)") ///
     xlab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid)  ///
     ylab(0 "0%" 20 "20%" 40 "40%", nogrid) ///
     xtit("Essential Diagnostics (Human Coded)")
 
     graph save "${folder}/temp/f2_3.gph" , replace
 
-tw (lfitci redcap_perc_correct human_chat_perc_checklist , lc(black) lw(thick) alw(none)) ///
-  (scatter redcap_perc_correct human_chat_perc_checklist, m(X) mfc(black) mlc(black)) ///
+tw (lfitci mcq_pct human_pct , lc(black) lw(thick) alw(none)) ///
+  (scatter mcq_pct human_pct, m(X) mfc(black) mlc(black)) ///
   , legend(off) title("D: MCQ Score (Hepatitis Cases)") ///
     xlab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid) ///
     ylab(0 "0%" 20 "20%" 40 "40%" 60 "60%" 80 "80%" 100 "100%", nogrid) ///
@@ -44,6 +44,7 @@ graph combine ///
   "${folder}/temp/f2_4.gph" ///
   ,  ysize(5) scale(0.7)
 
+  graph export "${folder}/manuscript/exhibits/F2.pdf" , replace
   graph export "${folder}/output/fig_2.jpg" , replace width(2000)
 
   graph combine ///
@@ -56,11 +57,9 @@ graph combine ///
     graph export "${folder}/output/fig_poster.png" , replace width(10000)
 
 //
+// Figure 3: Item-level sensitivity and specificity (Claude vs human)
 
-import delimited using "${folder}/data/agreement-long.csv" , clear varnames(1)
-
-  destring human , replace force
-  destring llm , replace force
+use "${folder}/data/agreement-long.dta" , clear
 
   drop if human == .
 
@@ -80,21 +79,7 @@ import delimited using "${folder}/data/agreement-long.csv" , clear varnames(1)
      , legend(off) ytit("Item Specificity") xtit("Item Sensitivity") ///
        xlab(, nogrid) ylab(,nogrid) ysize(5)
 
+       graph export "${folder}/manuscript/exhibits/F3.pdf" , replace
        graph export "${folder}/output/fig_3.jpg" , replace width(2000)
-
-/*
-// Create IRT Scores
-collapse (firstnm) *_h_* , by(name)
-
-// Remove questions with no variation
-foreach var of varlist *_h_* {
-  su `var'
-  if `r(Var)' ==  0 drop `var'
-}
-
-// Estimate IRT scores for diagnosis
-irt 3pl *_h_*
-  predict irt
-*/
 
 // End
