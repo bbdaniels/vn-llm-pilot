@@ -7,7 +7,7 @@ tw (lfitci human_pct expert1 , lc(black) lw(thick) alw(none)) ///
   (scatter human_pct expert1, m(X) jitter(5) mfc(black) mlc(black)) ///
    , legend(off) title("A: Expert Rating (Original Vietnamese)") ///
      ylab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid) xlab(,nogrid) ///
-     ytit("Essential Diagnostics (Human Coded)")
+     ytit("Essential Diagnostics (Human Coded)") xtit("Expert Rating (1-5)")
 
      graph save "${folder}/temp/f2_1.gph" , replace
 
@@ -15,7 +15,7 @@ tw (lfitci human_pct expert2 , lc(black) lw(thick) alw(none)) ///
   (scatter human_pct expert2, m(X) jitter(5) mfc(black) mlc(black)) ///
   , legend(off) title("B: Expert Rating (Translated English)") ///
     ylab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid) xlab(,nogrid) ///
-    ytit("Essential Diagnostics (Human Coded)")
+    ytit("Essential Diagnostics (Human Coded)") xtit("Expert Rating (1-5)")
 
     graph save "${folder}/temp/f2_2.gph" , replace
 
@@ -24,7 +24,7 @@ tw (lfitci human_pct claude_pct , lc(black) lw(thick) alw(none)) ///
   , legend(off) title("C: Essential Diagnostics (Claude, English)") ///
     ylab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid)  ///
     xlab(0 "0%" 20 "20%" 40 "40%", nogrid) ///
-    ytit("Essential Diagnostics (Human Coded)")
+    ytit("Essential Diagnostics (Human Coded)") xtit("Essential Diagnostics (Claude Coded)")
 
     graph save "${folder}/temp/f2_3.gph" , replace
 
@@ -33,7 +33,7 @@ tw (lfitci human_pct claude_vn_pct , lc(black) lw(thick) alw(none)) ///
   , legend(off) title("D: Essential Diagnostics (Claude, Vietnamese)") ///
     ylab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid)  ///
     xlab(0 "0%" 20 "20%" 40 "40%", nogrid) ///
-    ytit("Essential Diagnostics (Human Coded)")
+    ytit("Essential Diagnostics (Human Coded)") xtit("Essential Diagnostics (Claude Coded)")
 
     graph save "${folder}/temp/f2_4.gph" , replace
 
