@@ -3,37 +3,37 @@
 
 use "${folder}/data/compiled-scores.dta" , clear
 
-tw (lfitci expert1 human_pct , lc(black) lw(thick) alw(none)) ///
-  (scatter expert1 human_pct, m(X) jitter(5) mfc(black) mlc(black)) ///
+tw (lfitci human_pct expert1 , lc(black) lw(thick) alw(none)) ///
+  (scatter human_pct expert1, m(X) jitter(5) mfc(black) mlc(black)) ///
    , legend(off) title("A: Expert Rating (Original Vietnamese)") ///
-     xlab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid) ylab(,nogrid) ///
-     xtit("Essential Diagnostics (Human Coded)")
+     ylab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid) xlab(,nogrid) ///
+     ytit("Essential Diagnostics (Human Coded)")
 
      graph save "${folder}/temp/f2_1.gph" , replace
 
-tw (lfitci expert2 human_pct , lc(black) lw(thick) alw(none)) ///
-  (scatter expert2 human_pct, m(X) jitter(5) mfc(black) mlc(black)) ///
+tw (lfitci human_pct expert2 , lc(black) lw(thick) alw(none)) ///
+  (scatter human_pct expert2, m(X) jitter(5) mfc(black) mlc(black)) ///
   , legend(off) title("B: Expert Rating (Translated English)") ///
-    xlab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid) ylab(,nogrid) ///
-    xtit("Essential Diagnostics (Human Coded)")
+    ylab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid) xlab(,nogrid) ///
+    ytit("Essential Diagnostics (Human Coded)")
 
     graph save "${folder}/temp/f2_2.gph" , replace
 
-tw (lfitci claude_pct human_pct , lc(black) lw(thick) alw(none)) ///
-  (scatter claude_pct human_pct, m(X) mfc(black) mlc(black)) ///
+tw (lfitci human_pct claude_pct , lc(black) lw(thick) alw(none)) ///
+  (scatter human_pct claude_pct, m(X) mfc(black) mlc(black)) ///
   , legend(off) title("C: Essential Diagnostics (Claude, English)") ///
-    xlab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid)  ///
-    ylab(0 "0%" 20 "20%" 40 "40%", nogrid) ///
-    xtit("Essential Diagnostics (Human Coded)")
+    ylab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid)  ///
+    xlab(0 "0%" 20 "20%" 40 "40%", nogrid) ///
+    ytit("Essential Diagnostics (Human Coded)")
 
     graph save "${folder}/temp/f2_3.gph" , replace
 
-tw (lfitci claude_vn_pct human_pct , lc(black) lw(thick) alw(none)) ///
-  (scatter claude_vn_pct human_pct, m(X) mfc(black) mlc(black)) ///
+tw (lfitci human_pct claude_vn_pct , lc(black) lw(thick) alw(none)) ///
+  (scatter human_pct claude_vn_pct, m(X) mfc(black) mlc(black)) ///
   , legend(off) title("D: Essential Diagnostics (Claude, Vietnamese)") ///
-    xlab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid)  ///
-    ylab(0 "0%" 20 "20%" 40 "40%", nogrid) ///
-    xtit("Essential Diagnostics (Human Coded)")
+    ylab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid)  ///
+    xlab(0 "0%" 20 "20%" 40 "40%", nogrid) ///
+    ytit("Essential Diagnostics (Human Coded)")
 
     graph save "${folder}/temp/f2_4.gph" , replace
 
