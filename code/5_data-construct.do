@@ -28,11 +28,11 @@ tw (lfitci claude_pct human_pct , lc(black) lw(thick) alw(none)) ///
 
     graph save "${folder}/temp/f2_3.gph" , replace
 
-tw (lfitci mcq_pct human_pct , lc(black) lw(thick) alw(none)) ///
-  (scatter mcq_pct human_pct, m(X) mfc(black) mlc(black)) ///
-  , legend(off) title("D: MCQ Score (Hepatitis Cases)") ///
-    xlab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid) ///
-    ylab(0 "0%" 20 "20%" 40 "40%" 60 "60%" 80 "80%" 100 "100%", nogrid) ///
+tw (lfitci claude_vn_pct human_pct , lc(black) lw(thick) alw(none)) ///
+  (scatter claude_vn_pct human_pct, m(X) mfc(black) mlc(black)) ///
+  , legend(off) title("D: Essential Diagnostics (Claude, Vietnamese)") ///
+    xlab(0 "0%" 10 "10%" 20 "20%" 30 "30%" 40 "40%" 50 "50%", nogrid)  ///
+    ylab(0 "0%" 20 "20%" 40 "40%", nogrid) ///
     xtit("Essential Diagnostics (Human Coded)")
 
     graph save "${folder}/temp/f2_4.gph" , replace

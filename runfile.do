@@ -20,9 +20,14 @@ if 0 {
   !python3 "${folder}/code/translate.py"
 }
 
-// Step 4: Classify transcripts against clinical rubric (Python/Claude)
+// Step 4a: Classify transcripts against clinical rubric (English, Python/Claude)
 if 0 {
   !python3 "${folder}/code/classify.py"
+}
+
+// Step 4b: Classify transcripts directly from Vietnamese (Python/Claude)
+if 0 {
+  !python3 "${folder}/code/classify_vn.py"
 }
 
 // Step 5: Compile scores (merge Claude + human + expert data)

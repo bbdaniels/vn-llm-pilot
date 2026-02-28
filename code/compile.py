@@ -30,6 +30,7 @@ DATA_DIR = PROJECT / "data"
 CODE_DIR = PROJECT / "code"
 
 CLAUDE_DTA = DATA_DIR / "pilot-coded.dta"
+CLAUDE_VN_DTA = DATA_DIR / "pilot-coded-vn.dta"
 HUMAN_XLSX = DATA_DIR / "pilot-human.xlsx"
 COMPILED_XLSX = DATA_DIR / "pilot-compiled-scores.xlsx"
 RUBRIC_JSON = CODE_DIR / "rubric.json"
@@ -94,9 +95,13 @@ def main():
     print("Loading rubric...")
     rubric = load_rubric(RUBRIC_JSON)
 
-    print("Loading Claude-coded data...")
+    print("Loading Claude-coded data (English)...")
     df_claude = pd.read_stata(str(CLAUDE_DTA))
     print(f"  {len(df_claude)} observations")
+
+    print("Loading Claude-coded data (Vietnamese)...")
+    df_claude_vn = pd.read_stata(str(CLAUDE_VN_DTA))
+    print(f"  {len(df_claude_vn)} observations")
 
     print("Loading human-coded data...")
     df_human = pd.read_excel(str(HUMAN_XLSX))
@@ -121,6 +126,7 @@ def main():
     print("\nComputing checklist percentages...")
 
     claude_cols = set(df_claude.columns)
+    claude_vn_cols = set(df_claude_vn.columns)
     human_cols = set(df_human.columns)
 
     results = []
@@ -149,6 +155,19 @@ def main():
             n_scored = sum(1 for iid in valid
                           if pd.notna(claude_row[iid]) and claude_row[iid] == 1)
             claude_pct = (n_scored / n_total) * 100 if n_total > 0 else None
+
+        # -- Claude (Vietnamese) checklist % --
+        claude_vn_match = df_claude_vn[
+            (df_claude_vn["name"] == name) & (df_claude_vn["condition"] == condition)
+        ]
+        claude_vn_pct = None
+        if len(claude_vn_match) == 1:
+            claude_vn_row = claude_vn_match.iloc[0]
+            valid_vn = [iid for iid in item_ids if iid in claude_vn_cols]
+            n_total_vn = len(valid_vn)
+            n_scored_vn = sum(1 for iid in valid_vn
+                              if pd.notna(claude_vn_row[iid]) and claude_vn_row[iid] == 1)
+            claude_vn_pct = (n_scored_vn / n_total_vn) * 100 if n_total_vn > 0 else None
 
         # -- Human checklist % --
         human_row = df_human.iloc[i]
@@ -189,6 +208,7 @@ def main():
             "condition": condition,
             "human_pct": human_pct,
             "claude_pct": claude_pct,
+            "claude_vn_pct": claude_vn_pct,
             "expert1": df_compiled.at[i, "expert1_chat"],
             "expert2": df_compiled.at[i, "expert2_chat"],
             "mcq_pct": df_compiled.at[i, "redcap_perc_correct"],
@@ -216,7 +236,8 @@ def main():
     # Summary stats
     print(f"\n--- Summary ---")
     print(f"Human checklist mean: {df_scores['human_pct'].mean():.1f}%")
-    print(f"Claude checklist mean: {df_scores['claude_pct'].mean():.1f}%")
+    print(f"Claude (English) checklist mean: {df_scores['claude_pct'].mean():.1f}%")
+    print(f"Claude (Vietnamese) checklist mean: {df_scores['claude_vn_pct'].mean():.1f}%")
     both = df_agree.dropna(subset=["human", "llm"])
     agree = (both["human"] == both["llm"]).mean()
     print(f"Item-level agreement: {agree:.1%}")
