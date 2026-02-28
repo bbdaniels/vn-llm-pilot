@@ -87,6 +87,44 @@ This study presents such a tool: a new method for self-administered and automati
 \end{figure}
 
 %% ————————————————————————————————
+%% MATERIALS AND METHODS
+%% ————————————————————————————————
+
+\section{Materials and methods}
+
+\subsection{Study design and participants}
+
+In August 2025, we administered a web-based SurveyCTO survey (either by laptop or by mobile phone) that included LLM-based virtual patient ``chatbots'' preloaded with a pool of ten clinical cases (five general primary care conditions and five hepatitis-related) (\textbf{Table \ref{tab:cases}}). Each case scenario -- detailing the patient's socioeconomic background, chief complaint, medical history, clinical exam results, and potential responses to a set of ``checklist'' questions -- was scripted by expert clinicians supporting the research team. The OpenAI application programming interface (API; model gpt-4.1-nano) was prompted through the SurveyCTO software to perform according to these scenarios such that reasonable standardization was achieved across interactions. The scenarios developed for this study are available in the \textbf{Supporting Information}.
+
+The research team first recruited and consented 9 physicians from a Provincial Hospital in Phu Tho, Vietnam, to a focus group for usability testing and UI/UX refinement. These providers received a live demonstration by the research team and were instructed to complete as many case scenarios as they found reasonable in a 45-minute period, followed by closed-ended (Likert scale) feedback questions on the realism of each case presentation. Two days later, the team conducted a structured group discussion to collect open-ended feedback, which was incorporated into the validation round.
+
+For the validation sample, the research team contacted and consented 22 providers enrolled in the 2024 cohort of the StITCH hepatitis care training program, which co-designed and delivered a people-centered model of care for hepatitis B and C at the primary health care level in Vietnam. The validation group was given a Zoom orientation with no additional in-person support. These providers were assigned to complete six vignettes selected at random (three general cases and three hepatitis cases each). Afterwards, they completed a traditional multiple-choice knowledge test on hepatitis care, which included clinical knowledge questions based on the same five hepatitis scenarios. Although the total number of providers included in the validation sample was small, they completed 132 interactions containing 433 unique data points, allowing sufficient independent variation to assess the relationships between performance measures given that we do not engage in statistical hypothesis testing.
+
+\subsection{Chatbot implementation}
+
+The chatbot interface was built using the SurveyCTO platform's web-based survey tools with an LLM plugin \citep{geiecke2024conversations}. Each clinical case was encoded as a structured system prompt (1,500--3,000 words) containing: the patient's demographic background and presenting complaint; a comprehensive medical and social history; pre-scripted responses to anticipated history-taking questions organized by clinical domain; clinical examination findings to be revealed when specific examinations were ordered; laboratory and imaging results for relevant tests; and the correct diagnosis with recommended treatment and counseling points. To maintain standardization, the system prompt instructed the model to report results as ``normal'' or ``unremarkable'' for tests not specified in the case scenario, and to stay in character as the patient throughout the interaction. The full set of case prompts is available in the \textbf{Supporting Information}.
+
+The OpenAI model gpt-4.1-nano was selected for cost-efficiency (approximately USD 0.015 per interaction) and adequate performance in Vietnamese-language roleplay. The SurveyCTO plugin manages conversational state by appending each user message and model response to the conversation history, which is passed in full with each subsequent API call. Providers accessed the survey on their personal smartphones or laptops via a URL link. The chatbot responded in Vietnamese (or the provider's preferred language) and maintained conversational context throughout each interaction. Providers could ask history-taking questions, order clinical examinations and laboratory tests, and provide a diagnosis and treatment plan, all through natural-language text input.
+
+\subsection{Data extraction and coding}
+
+Interaction transcripts were translated from Vietnamese to English using Anthropic's Claude language model (claude-haiku-4-5) and manually coded by the research team to determine whether each provider: (1) asked each of the pre-specified checklist history-taking questions, (2) ordered the recommended clinical examinations and laboratory tests, and (3) offered the correct diagnosis. The transcripts were also coded using the Anthropic Claude model (claude-haiku-4-5) with an identical schema as the manual coding, asking for each item, ``In the following text, if the user was a doctor, did they specifically [ask/order/prescribe]\ldots''. To assess whether a separate translation step was necessary, we also ran the LLM coding directly on the original Vietnamese transcripts using the same model and rubric. Using the human-coded and LLM-coded checklist items separately, a ``checklist score'' was calculated for each vignette response as the proportion of items completed.
+
+\subsection{Outcomes}
+
+For the focus group, primary outcomes were: (1) qualitative feedback on the LLM-based vignette survey obtained through the focus group discussion, and (2) quantitative ratings of scenario presentation realism. For the validation sample, the primary outcome was validation of the human-coded ``essential diagnostic checklist'' LLM vignette score via interaction-level correlations with expert clinician grading of the transcripts both in English and in the original Vietnamese. Our secondary outcomes were: (1) the reliability of the LLM-coded ``essential diagnostic checklist,'' assessed by correlation with ground truth from human coding; and (2) a comparison of LLM coding from translated English transcripts versus directly from the original Vietnamese transcripts.
+
+\subsection{Statistical analysis}
+
+For the focus group, the transcript was thematically analyzed by the research team to identify common themes for tool refinement. Provider perceptions of vignette realism were captured through structured survey questions rating overall realism, clinical presentation realism, and social/economic presentation realism. We calculated means and 95\% confidence intervals for each.
+
+For the validation sample, agreement between manual and automated data extraction was assessed by calculating the proportion of agreement, true positives, false positives, true negatives, and false negatives based on the human coding as ground truth. The two expert clinicians who developed the vignettes also scored provider performance on each transcript from 1--5 separately for history-taking, diagnosis accuracy, and management completeness (one using the Vietnamese original and one using the English translation). Agreement of the human grading with each of these measures was assessed through unadjusted ordinary least squares (OLS) regression. Clustering was not necessary in any case since we calculated results separately by scenario -- no provider repeated the same scenario twice. This study is reported following the Standards for Reporting of Diagnostic Accuracy Studies (STARD) guidelines where applicable to the LLM-versus-human coding comparison, and the Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) guidelines for the observational validation design. Completed checklists are provided in the \textbf{Supporting Information}.
+
+\subsection{Ethical approval}
+
+All procedures were approved by the ethical review board of the Hanoi University of Public Health (025-375/DD-YTCC) and Mass General Brigham Institutional Review Board (Protocol Number 2023P003011). All participants provided written informed consent prior to participation.
+
+%% ————————————————————————————————
 %% RESULTS
 %% ————————————————————————————————
 
@@ -185,44 +223,6 @@ This study has several limitations. First, the sample size was small (22 provide
 \subsection{Conclusion}
 
 This study demonstrates that LLM-driven conversational vignettes can produce a low-cost, flexible, and scalable platform for measuring health care provider competencies. The method eliminates the need for in-person enumerators while preserving the open-ended interaction format that is the foundation of vignette validity. The platform is open-source, built on widely used survey software, and designed for adaptation to a wide variety of clinical contexts and languages. As LLM capabilities continue to improve, both the chatbot interactions and the automated data extraction are likely to become more reliable, further reducing the cost and increasing the feasibility of routine competency measurement. With further validation across settings and languages, this method has the potential to support rapid, low-cost measurement of health care provider competencies in diverse health system contexts.
-
-%% ————————————————————————————————
-%% MATERIALS AND METHODS
-%% ————————————————————————————————
-
-\section{Materials and methods}
-
-\subsection{Study design and participants}
-
-In August 2025, we administered a web-based SurveyCTO survey (either by laptop or by mobile phone) that included LLM-based virtual patient ``chatbots'' preloaded with a pool of ten clinical cases (five general primary care conditions and five hepatitis-related) (\textbf{Table \ref{tab:cases}}). Each case scenario -- detailing the patient's socioeconomic background, chief complaint, medical history, clinical exam results, and potential responses to a set of ``checklist'' questions -- was scripted by expert clinicians supporting the research team. The OpenAI application programming interface (API; model gpt-4.1-nano) was prompted through the SurveyCTO software to perform according to these scenarios such that reasonable standardization was achieved across interactions. The scenarios developed for this study are available in the \textbf{Supporting Information}.
-
-The research team first recruited and consented 9 physicians from a Provincial Hospital in Phu Tho, Vietnam, to a focus group for usability testing and UI/UX refinement. These providers received a live demonstration by the research team and were instructed to complete as many case scenarios as they found reasonable in a 45-minute period, followed by closed-ended (Likert scale) feedback questions on the realism of each case presentation. Two days later, the team conducted a structured group discussion to collect open-ended feedback, which was incorporated into the validation round.
-
-For the validation sample, the research team contacted and consented 22 providers enrolled in the 2024 cohort of the StITCH hepatitis care training program, which co-designed and delivered a people-centered model of care for hepatitis B and C at the primary health care level in Vietnam. The validation group was given a Zoom orientation with no additional in-person support. These providers were assigned to complete six vignettes selected at random (three general cases and three hepatitis cases each). Afterwards, they completed a traditional multiple-choice knowledge test on hepatitis care, which included clinical knowledge questions based on the same five hepatitis scenarios. Although the total number of providers included in the validation sample was small, they completed 132 interactions containing 433 unique data points, allowing sufficient independent variation to assess the relationships between performance measures given that we do not engage in statistical hypothesis testing.
-
-\subsection{Chatbot implementation}
-
-The chatbot interface was built using the SurveyCTO platform's web-based survey tools with an LLM plugin \citep{geiecke2024conversations}. Each clinical case was encoded as a structured system prompt (1,500--3,000 words) containing: the patient's demographic background and presenting complaint; a comprehensive medical and social history; pre-scripted responses to anticipated history-taking questions organized by clinical domain; clinical examination findings to be revealed when specific examinations were ordered; laboratory and imaging results for relevant tests; and the correct diagnosis with recommended treatment and counseling points. To maintain standardization, the system prompt instructed the model to report results as ``normal'' or ``unremarkable'' for tests not specified in the case scenario, and to stay in character as the patient throughout the interaction. The full set of case prompts is available in the \textbf{Supporting Information}.
-
-The OpenAI model gpt-4.1-nano was selected for cost-efficiency (approximately USD 0.015 per interaction) and adequate performance in Vietnamese-language roleplay. The SurveyCTO plugin manages conversational state by appending each user message and model response to the conversation history, which is passed in full with each subsequent API call. Providers accessed the survey on their personal smartphones or laptops via a URL link. The chatbot responded in Vietnamese (or the provider's preferred language) and maintained conversational context throughout each interaction. Providers could ask history-taking questions, order clinical examinations and laboratory tests, and provide a diagnosis and treatment plan, all through natural-language text input.
-
-\subsection{Data extraction and coding}
-
-Interaction transcripts were translated from Vietnamese to English using Anthropic's Claude language model (claude-haiku-4-5) and manually coded by the research team to determine whether each provider: (1) asked each of the pre-specified checklist history-taking questions, (2) ordered the recommended clinical examinations and laboratory tests, and (3) offered the correct diagnosis. The transcripts were also coded using the Anthropic Claude model (claude-haiku-4-5) with an identical schema as the manual coding, asking for each item, ``In the following text, if the user was a doctor, did they specifically [ask/order/prescribe]\ldots''. To assess whether a separate translation step was necessary, we also ran the LLM coding directly on the original Vietnamese transcripts using the same model and rubric. Using the human-coded and LLM-coded checklist items separately, a ``checklist score'' was calculated for each vignette response as the proportion of items completed.
-
-\subsection{Outcomes}
-
-For the focus group, primary outcomes were: (1) qualitative feedback on the LLM-based vignette survey obtained through the focus group discussion, and (2) quantitative ratings of scenario presentation realism. For the validation sample, the primary outcome was validation of the human-coded ``essential diagnostic checklist'' LLM vignette score via interaction-level correlations with expert clinician grading of the transcripts both in English and in the original Vietnamese. Our secondary outcomes were: (1) the reliability of the LLM-coded ``essential diagnostic checklist,'' assessed by correlation with ground truth from human coding; and (2) a comparison of LLM coding from translated English transcripts versus directly from the original Vietnamese transcripts.
-
-\subsection{Statistical analysis}
-
-For the focus group, the transcript was thematically analyzed by the research team to identify common themes for tool refinement. Provider perceptions of vignette realism were captured through structured survey questions rating overall realism, clinical presentation realism, and social/economic presentation realism. We calculated means and 95\% confidence intervals for each.
-
-For the validation sample, agreement between manual and automated data extraction was assessed by calculating the proportion of agreement, true positives, false positives, true negatives, and false negatives based on the human coding as ground truth. The two expert clinicians who developed the vignettes also scored provider performance on each transcript from 1--5 separately for history-taking, diagnosis accuracy, and management completeness (one using the Vietnamese original and one using the English translation). Agreement of the human grading with each of these measures was assessed through unadjusted ordinary least squares (OLS) regression. Clustering was not necessary in any case since we calculated results separately by scenario -- no provider repeated the same scenario twice. This study is reported following the Standards for Reporting of Diagnostic Accuracy Studies (STARD) guidelines where applicable to the LLM-versus-human coding comparison, and the Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) guidelines for the observational validation design. Completed checklists are provided in the \textbf{Supporting Information}.
-
-\subsection{Ethical approval}
-
-All procedures were approved by the ethical review board of the Hanoi University of Public Health (025-375/DD-YTCC) and Mass General Brigham Institutional Review Board (Protocol Number 2023P003011). All participants provided written informed consent prior to participation.
 
 %% ————————————————————————————————
 %% ACKNOWLEDGMENTS
