@@ -185,15 +185,21 @@ def main():
         # -- Item-level agreement rows --
         if len(claude_match) == 1:
             claude_row = claude_match.iloc[0]
+            claude_vn_row_a = (claude_vn_match.iloc[0]
+                               if len(claude_vn_match) == 1 else None)
             for iid in item_ids:
                 hid = claude_to_human_id(iid)
                 human_val = None
                 claude_val = None
+                claude_vn_val = None
 
                 if hid in human_cols and pd.notna(human_row[hid]):
                     human_val = int(human_row[hid])
                 if iid in claude_cols and pd.notna(claude_row[iid]):
                     claude_val = int(claude_row[iid])
+                if (claude_vn_row_a is not None and iid in claude_vn_cols
+                        and pd.notna(claude_vn_row_a[iid])):
+                    claude_vn_val = int(claude_vn_row_a[iid])
 
                 agreement_rows.append({
                     "item": iid,
@@ -201,6 +207,7 @@ def main():
                     "condition": condition,
                     "human": human_val,
                     "llm": claude_val,
+                    "llm_vn": claude_vn_val,
                 })
 
         results.append({
