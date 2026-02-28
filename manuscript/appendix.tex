@@ -87,4 +87,245 @@ The following pages contain the full clinical case scenario descriptions for all
   \label{fig:s3}
 \end{figure}
 
+%% ————————————————————————————————
+%% D: STROBE CHECKLIST
+%% ————————————————————————————————
+
+\newpage
+\section{S1 Checklist: STROBE checklist for cross-sectional studies}\label{app:strobe}
+
+\noindent \textbf{Study Design:} Cross-sectional validation study
+
+\noindent \textbf{Study Registration:} Not registered; study is a methods paper validating an assessment tool
+
+\vspace{12pt}
+
+\noindent This checklist indicates whether each of the 22 STROBE items is reported in the manuscript, and the corresponding page(s) or section(s) where information can be found.
+
+\vspace{12pt}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{p{0.08\textwidth}p{0.65\textwidth}p{0.25\textwidth}}
+\toprule
+\textbf{Item} & \textbf{STROBE Checklist Item} & \textbf{Reported on} \\
+\midrule
+
+\textit{Title and abstract} & & \\
+\midrule
+
+1 & (a) Indicate the study's design with a commonly used term in the title or the abstract & Title, Abstract \\
+  & (b) Provide in the abstract an informative and balanced summary of what was found & Abstract \\
+
+\midrule
+\textit{Introduction} & & \\
+\midrule
+
+2 & Give the rationale and objectives for this study, specifying any pre-specified hypotheses & Introduction, paragraphs 1--3 \\
+
+\midrule
+\textit{Methods} & & \\
+\midrule
+
+3 & Describe the key elements of the study setting & Materials and Methods, ``Study design and participants'' \\
+
+4 & Describe the eligibility criteria, and sources and methods of participant selection and follow-up & Materials and Methods, ``Study design and participants'' \\
+
+5 & (a) Give the number of participants at each stage of the study & Materials and Methods; Results, Tables 1--2 \\
+  & (b) Give reasons for non-participation at each stage & Materials and Methods (minimal loss due to focused recruitment) \\
+  & (c) Consider use of a flow diagram & Not applicable; no substantial eligibility screening \\
+
+6 & (a) Clearly define all outcomes, exposures, predictors, potential confounders, and effect modifiers & Materials and Methods, ``Outcomes'' and ``Data extraction and coding'' \\
+  & (b) Describe sources of information and corresponding measurement dates & Materials and Methods, ``Data extraction and coding'' \\
+
+7 & (a) Describe how quantitative variables were handled in the analyses & Materials and Methods, ``Statistical analysis''; Results \\
+  & (b) Describe how missing data were addressed & No missing data \\
+
+8 & (a) Describe all statistical methods & Materials and Methods, ``Statistical analysis'' (Pearson correlation, OLS regression) \\
+  & (b) Describe any methods used to examine subgroups and interactions & Results calculated separately by scenario \\
+  & (c) Explain how matching was conducted, if applicable & Not applicable \\
+  & (d) Describe any sensitivity analyses & Discussion (future research directions) \\
+
+9 & Report numbers of outcome events or summary measures over time & Results; Tables 1--2; Figures 2--3 \\
+
+10 & Describe characteristics of study participants & Results, ``Focus group'' and ``Validation sample'' \\
+
+11 & Give unadjusted and confounder-adjusted estimates and their precision & Results (Pearson correlations, OLS $r^{2}$, 95\% CIs) \\
+
+12 & Report category boundaries when continuous variables were categorized & Materials and Methods (binary checklist items; 1--5 expert scale) \\
+
+\midrule
+\textit{Results} & & \\
+\midrule
+
+13 & (a) Give characteristics of study participants & Results; Tables 1--2 \\
+  & (b) Indicate the number of participants with missing data & No missing data \\
+  & (c) Summarise follow-up time & Not applicable; cross-sectional study \\
+
+14 & (a) Report numbers of outcome events or summary measures & Results, ``Validation sample'' \\
+  & (b) Report category boundaries & Materials and Methods \\
+  & (c) Estimate risk ratios, odds ratios, or differences in means with 95\% CIs & Results (Pearson $\rho$, OLS $r^{2}$, regression coefficients) \\
+
+15 & Present results of subgroup analyses & Item-level analysis by scenario; English vs.\ Vietnamese in Figure 3 \\
+
+16 & Give results of all important analyses & Results; Figures 2--3 \\
+
+\midrule
+\textit{Discussion} & & \\
+\midrule
+
+17 & Summarize key results with reference to study objectives & Discussion, paragraph 1 \\
+
+18 & Discuss limitations of the study & Discussion, ``Limitations'' \\
+
+19 & Discuss the generalizability of the study findings & Discussion, paragraphs 1--2 and ``Limitations'' \\
+
+20 & Give a general interpretation of the results in the context of other evidence & Discussion, paragraphs 1--3 \\
+
+\midrule
+\textit{Other information} & & \\
+\midrule
+
+21 & Report funding sources and the role of funders & Acknowledgments \\
+
+22 & Provide information on how to access supplementary information, code, and data & Materials and Methods; Supporting Information \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% ————————————————————————————————
+%% E: STARD CHECKLIST
+%% ————————————————————————————————
+
+\newpage
+\section{S2 Checklist: STARD checklist for diagnostic accuracy studies}\label{app:stard}
+
+\noindent This checklist follows STARD 2015 guidelines for the diagnostic accuracy validation component of the study, in which LLM-automated coding of clinical vignette transcripts (the index test) was compared against human-coded ground truth (the reference standard).
+
+\vspace{6pt}
+
+\noindent \textbf{Index test:} Anthropic Claude (claude-haiku-4-5) automated coding of binary checklist items from transcripts.
+
+\noindent \textbf{Reference standard:} Manual human coding of the same items from the same transcripts.
+
+\noindent \textbf{Population:} 22 providers, 132 vignette interactions across ten clinical scenarios.
+
+\vspace{12pt}
+
+\begin{table}[htbp]
+\centering
+\begin{tabularx}{\textwidth}{|p{0.8cm}|p{5.5cm}|p{6.5cm}|p{3cm}|}
+\hline
+\textbf{Item} & \textbf{STARD Item} & \textbf{Reported on Page/Section} & \textbf{Notes} \\
+\hline
+
+\multicolumn{4}{l}{\textbf{TITLE AND ABSTRACT}} \\
+\hline
+
+1 & Identification as a diagnostic accuracy study & Title, Abstract & Identified as validation study \\
+\hline
+
+\multicolumn{4}{l}{\textbf{INTRODUCTION}} \\
+\hline
+
+2 & Research question or aim & Introduction, paragraph 3 & LLM coding reliability vs.\ human ground truth \\
+\hline
+
+\multicolumn{4}{l}{\textbf{METHODS}} \\
+\hline
+
+3 & Study population (inclusion/exclusion criteria) & Methods: Study design & 22 providers in StITCH program \\
+\hline
+
+4 & Index test fully described & Methods: Data extraction and coding & Model, coding schema, prompts in SI \\
+\hline
+
+5 & Reference standard fully described & Methods: Data extraction and coding & Identical classification schema \\
+\hline
+
+6 & Rationale for choice of reference standard & Methods: Data extraction and coding & Human coding as ground truth \\
+\hline
+
+7 & Definition of algorithmic steps & Methods: Outcomes & Checklist score = proportion completed \\
+\hline
+
+8 & Blinding of assessors & Methods: Study design & Independent processes by design \\
+\hline
+
+9 & Timing between index test and reference standard & Methods: Data extraction and coding & LLM coding after human coding \\
+\hline
+
+10 & Appropriate spectrum of participants & Methods: Study design & Providers of varying experience \\
+\hline
+
+11 & How participants were selected & Methods: Study design & StITCH program recruitment \\
+\hline
+
+12 & Inclusion/exclusion criteria described & Methods: Study design & Primary care providers \\
+\hline
+
+13 & Number enrolled & Results: Validation sample & 22 providers, 132 interactions \\
+\hline
+
+14 & Index test available for all & Results: Validation sample & All 132 coded by LLM \\
+\hline
+
+15 & Reference standard available for all & Results: Validation sample & All 132 coded by human \\
+\hline
+
+16 & Dropouts and uninterpretable results & Results: Validation sample & None \\
+\hline
+
+\multicolumn{4}{l}{\textbf{ANALYSIS AND RESULTS}} \\
+\hline
+
+17 & Sample size calculation & Methods: Study design & Pilot study; 132 interactions, 433 items \\
+\hline
+
+18 & Handling of missing data & Methods & No missing data \\
+\hline
+
+19 & Handling of uninterpretable results & Results & None \\
+\hline
+
+20 & Sensitivity and specificity & Results; Figure 3 & Mean sensitivity 0.31; specificity 0.85 \\
+\hline
+
+21 & Measures of statistical uncertainty & Results & 95\% CIs for all estimates \\
+\hline
+
+22 & Agreement between index and reference & Results; Figures 2--3 & $\rho$ = 0.51--0.53; item sensitivity/specificity \\
+\hline
+
+23 & Link to clinical decision-making & Discussion & Scalable assessment without human review \\
+\hline
+
+\multicolumn{4}{l}{\textbf{DISCUSSION}} \\
+\hline
+
+24 & Summary of main findings & Discussion, paragraph 1 & Moderate correlation; Vietnamese comparable \\
+\hline
+
+25 & Limitations and sources of bias & Discussion: Limitations & Six limitations described \\
+\hline
+
+26 & Implications for clinical practice & Discussion & Low-cost, scalable competency assessment \\
+\hline
+
+27 & Comparison with other studies & Discussion & Consistent with LLM scoring benchmarks \\
+\hline
+
+28 & Consistency across subgroups & Results; Figure 3 & English vs.\ Vietnamese comparison \\
+\hline
+
+29 & Consistency with other diagnostic studies & Discussion & Moderate correlation typical \\
+\hline
+
+30 & Separate reporting for reader interpretation & Results; Figures 2--3 & Stratified by comparison type \\
+\hline
+
+\end{tabularx}
+\end{table}
+
 \end{document}
