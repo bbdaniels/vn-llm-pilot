@@ -1,0 +1,45 @@
+\documentclass[11pt]{letter}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+
+\signature{Benjamin Daniels, Ph.D.\\
+Harvard T.H.\ Chan School of Public Health\\
+gui2de, Georgetown University\\
+bdaniels@fas.harvard.edu}
+
+\address{Benjamin Daniels, Ph.D.\\
+Harvard T.H.\ Chan School of Public Health\\
+677 Huntington Avenue\\
+Boston, MA 02115}
+
+\date{\today}
+
+\begin{document}
+
+\begin{letter}{Editorial Board\\
+PLOS Digital Health}
+
+\opening{Dear Editors,}
+
+We are pleased to submit our manuscript, ``Large language models for self-administered conversational vignette assessment of provider competencies: A pilot and validation study in Vietnam with automated LLM-powered transcript classification,'' for consideration as a Research Article in PLOS Digital Health.
+
+Clinical vignettes are a primary method for measuring health care provider competencies, but traditional implementations require trained enumerators and in-person coordination, making them expensive to deploy at scale. We developed and validated a new approach that uses large language models to simulate standardized patients in realistic clinical conversations that providers complete independently on their own devices. The plugin is built on widely used survey software (SurveyCTO) and is open-source with web-based deployment capabilities.
+
+We believe this work will be of broad interest to the PLOS Digital Health readership for several reasons:
+
+\begin{enumerate}
+  \item \textbf{Novel methodology:} To our knowledge, this is the first validated, self-administered clinical vignette platform powered by LLMs, combining patient simulation with automated data extraction in a single pipeline.
+  \item \textbf{LMIC deployment and validation:} Unlike most LLM-based clinical tools developed for high-income settings, we demonstrate feasibility and validation in a low- and middle-income country context where the need for scalable quality measurement is greatest.
+  \item \textbf{Multilingual capability:} We provide evidence that LLM-based scoring works comparably across languages without a separate translation step, a key for global scalability.
+  \item \textbf{Practical impact:} The total chatbot cost for 132 clinical interactions was under USD 2, representing an orders-of-magnitude reduction compared to traditional vignette surveys.
+  \item \textbf{Open-source and replicable:} All code and rubric data are publicly available for adaptation to other health system contexts.
+\end{enumerate}
+
+In Vietnam, we piloted and validated this tool with 31 physicians across ten clinical scenarios in two phases. In a focus group, providers rated the simulated patient interactions as realistic and user-friendly. In the validation phase, 22 providers completed 132 vignette interactions. Essential diagnostic checklist scores (human-coded from translated transcripts) correlated well with holistig independent expert clinician evaluations both in the original Vietnamese and in translation (Pearson's $\rho$ = 0.55--0.60). We also developed an automated data extraction pipeline using Anthropic's Claude language model, which showed reasonable agreement with human coding ($\rho$ = 0.53) and performed comparably when coding directly from Vietnamese transcripts ($\rho$ = 0.51), suggesting that a separate translation step may not be necessary for multilingual deployment.
+
+We hope this work finds you well and we thank you for your consideration.
+
+\closing{Sincerely,}
+
+\end{letter}
+\end{document}

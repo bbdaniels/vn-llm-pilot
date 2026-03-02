@@ -30,8 +30,14 @@ if 0 {
   !python3 "${folder}/code/classify_vn.py"
 }
 
+// Step 4c: Re-classify with confidence scores (for AUROC analysis)
+if 0 {
+  !python3 "${folder}/code/classify_conf.py"
+  !python3 "${folder}/code/classify_conf_vn.py"
+}
+
 // Step 5: Compile scores (merge Claude + human + expert data)
-if 1 {
+if 0 {
   !python3 "${folder}/code/compile.py"
 }
 

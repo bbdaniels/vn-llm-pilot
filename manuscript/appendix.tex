@@ -6,10 +6,13 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}
 \usepackage{ragged2e}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{hyperref}
 \usepackage{amsmath}
+\usepackage{longtable}
 \usepackage[margin=1in,footskip=0.25in]{geometry}
 \usepackage{setspace}
   \doublespacing
@@ -17,7 +20,7 @@
 
 \begin{document}
 
-\title{S1 Appendix:\\Large language models for self-administered clinical vignette assessment: a pilot and validation study in Vietnam}
+\title{S1 Appendix:\\Large language models for self-administered conversational vignette assessment of provider competencies: A pilot and validation study in Vietnam with automated LLM-powered transcript classification}
 \author{Benjamin Daniels, Wenjia(Stella) Zhang, Hoang Nguyen, and David Duong}
 
 \date{}
@@ -45,14 +48,16 @@ The following pages contain the full clinical case scenario descriptions for all
 \newpage
 \section{Supplementary tables}\label{app:tables}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{appendix/validation-table1.png}
   \caption*{\textbf{Table S1. Case scenarios and realism ratings.} Each row shows the case condition, opening statement, recommended treatment and counseling points, and mean realism ratings (1--5 scale) from the focus group across four dimensions: overall realism, realism given diagnosis, patient social background, and case easiness. The final column indicates the number of focus group interactions per case.}
   \label{tab:s1}
 \end{figure}
 
-\begin{figure}[htbp]
+\newpage
+
+\begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{appendix/validation-table2.png}
   \caption*{\textbf{Table S2. Summary of provider performance by case.} For each clinical case, the table shows the number of providers who completed that case, mean completion of the essential diagnostic checklist (\%, with 95\% CI), proportion of correct diagnoses (\%, with 95\% CI), and mean diagnostic interaction duration in minutes (with 95\% CI).}
@@ -66,21 +71,25 @@ The following pages contain the full clinical case scenario descriptions for all
 \newpage
 \section{Focus group supplementary results}\label{app:fgd}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.85\textwidth]{appendix/fgd-realism-condition.png}
   \caption*{\textbf{Figure S1. Average realism rating by condition and feedback question.} Mean ratings (1--5 scale) with 95\% confidence intervals are shown for each of six conditions completed in the focus group, across four feedback dimensions: overall realism, realism given diagnosis, realism of patient social background, and case easiness.}
   \label{fig:s1}
 \end{figure}
 
-\begin{figure}[htbp]
+\newpage
+
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.75\textwidth]{appendix/fgd-duration.png}
   \caption*{\textbf{Figure S2. Average case duration by condition in the focus group.} Mean duration in minutes with 95\% confidence intervals for each condition. Hepatitis and hypertension cases tended to take longer, while tuberculosis cases were completed fastest.}
   \label{fig:s2}
 \end{figure}
 
-\begin{figure}[htbp]
+\newpage
+
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.85\textwidth]{appendix/fgd-realism-feedback.png}
   \caption*{\textbf{Figure S3. Distribution of focus group realism ratings by feedback question.} Percentage of all ratings at each level (1--5) across four dimensions. Ratings were concentrated at 3--4, with the majority at 4, indicating generally positive perceptions of realism across all dimensions.}
@@ -92,7 +101,7 @@ The following pages contain the full clinical case scenario descriptions for all
 %% ————————————————————————————————
 
 \newpage
-\section{S1 Checklist: STROBE checklist for cross-sectional studies}\label{app:strobe}
+\section{STROBE checklist for cross-sectional studies}\label{app:strobe}
 
 \noindent \textbf{Study Design:} Cross-sectional validation study
 
@@ -104,12 +113,22 @@ The following pages contain the full clinical case scenario descriptions for all
 
 \vspace{12pt}
 
-\begin{table}[htbp]
-\centering
-\begin{tabular}{p{0.08\textwidth}p{0.65\textwidth}p{0.25\textwidth}}
+\begin{singlespace}
+\small
+\begin{longtable}{p{0.08\textwidth}p{0.60\textwidth}p{0.25\textwidth}}
 \toprule
 \textbf{Item} & \textbf{STROBE Checklist Item} & \textbf{Reported on} \\
 \midrule
+\endfirsthead
+\toprule
+\textbf{Item} & \textbf{STROBE Checklist Item} & \textbf{Reported on} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{3}{r}{\textit{Continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
 
 \textit{Title and abstract} & & \\
 \midrule
@@ -190,142 +209,7 @@ The following pages contain the full clinical case scenario descriptions for all
 
 22 & Provide information on how to access supplementary information, code, and data & Materials and Methods; Supporting Information \\
 
-\bottomrule
-\end{tabular}
-\end{table}
-
-%% ————————————————————————————————
-%% E: STARD CHECKLIST
-%% ————————————————————————————————
-
-\newpage
-\section{S2 Checklist: STARD checklist for diagnostic accuracy studies}\label{app:stard}
-
-\noindent This checklist follows STARD 2015 guidelines for the diagnostic accuracy validation component of the study, in which LLM-automated coding of clinical vignette transcripts (the index test) was compared against human-coded ground truth (the reference standard).
-
-\vspace{6pt}
-
-\noindent \textbf{Index test:} Anthropic Claude (claude-haiku-4-5) automated coding of binary checklist items from transcripts.
-
-\noindent \textbf{Reference standard:} Manual human coding of the same items from the same transcripts.
-
-\noindent \textbf{Population:} 22 providers, 132 vignette interactions across ten clinical scenarios.
-
-\vspace{12pt}
-
-\begin{table}[htbp]
-\centering
-\begin{tabularx}{\textwidth}{|p{0.8cm}|p{5.5cm}|p{6.5cm}|p{3cm}|}
-\hline
-\textbf{Item} & \textbf{STARD Item} & \textbf{Reported on Page/Section} & \textbf{Notes} \\
-\hline
-
-\multicolumn{4}{l}{\textbf{TITLE AND ABSTRACT}} \\
-\hline
-
-1 & Identification as a diagnostic accuracy study & Title, Abstract & Identified as validation study \\
-\hline
-
-\multicolumn{4}{l}{\textbf{INTRODUCTION}} \\
-\hline
-
-2 & Research question or aim & Introduction, paragraph 3 & LLM coding reliability vs.\ human ground truth \\
-\hline
-
-\multicolumn{4}{l}{\textbf{METHODS}} \\
-\hline
-
-3 & Study population (inclusion/exclusion criteria) & Methods: Study design & 22 providers in StITCH program \\
-\hline
-
-4 & Index test fully described & Methods: Data extraction and coding & Model, coding schema, prompts in SI \\
-\hline
-
-5 & Reference standard fully described & Methods: Data extraction and coding & Identical classification schema \\
-\hline
-
-6 & Rationale for choice of reference standard & Methods: Data extraction and coding & Human coding as ground truth \\
-\hline
-
-7 & Definition of algorithmic steps & Methods: Outcomes & Checklist score = proportion completed \\
-\hline
-
-8 & Blinding of assessors & Methods: Study design & Independent processes by design \\
-\hline
-
-9 & Timing between index test and reference standard & Methods: Data extraction and coding & LLM coding after human coding \\
-\hline
-
-10 & Appropriate spectrum of participants & Methods: Study design & Providers of varying experience \\
-\hline
-
-11 & How participants were selected & Methods: Study design & StITCH program recruitment \\
-\hline
-
-12 & Inclusion/exclusion criteria described & Methods: Study design & Primary care providers \\
-\hline
-
-13 & Number enrolled & Results: Validation sample & 22 providers, 132 interactions \\
-\hline
-
-14 & Index test available for all & Results: Validation sample & All 132 coded by LLM \\
-\hline
-
-15 & Reference standard available for all & Results: Validation sample & All 132 coded by human \\
-\hline
-
-16 & Dropouts and uninterpretable results & Results: Validation sample & None \\
-\hline
-
-\multicolumn{4}{l}{\textbf{ANALYSIS AND RESULTS}} \\
-\hline
-
-17 & Sample size calculation & Methods: Study design & Pilot study; 132 interactions, 433 items \\
-\hline
-
-18 & Handling of missing data & Methods & No missing data \\
-\hline
-
-19 & Handling of uninterpretable results & Results & None \\
-\hline
-
-20 & Sensitivity and specificity & Results; Figure 3 & Mean sensitivity 0.31; specificity 0.85 \\
-\hline
-
-21 & Measures of statistical uncertainty & Results & 95\% CIs for all estimates \\
-\hline
-
-22 & Agreement between index and reference & Results; Figures 2--3 & $\rho$ = 0.51--0.53; item sensitivity/specificity \\
-\hline
-
-23 & Link to clinical decision-making & Discussion & Scalable assessment without human review \\
-\hline
-
-\multicolumn{4}{l}{\textbf{DISCUSSION}} \\
-\hline
-
-24 & Summary of main findings & Discussion, paragraph 1 & Moderate correlation; Vietnamese comparable \\
-\hline
-
-25 & Limitations and sources of bias & Discussion: Limitations & Six limitations described \\
-\hline
-
-26 & Implications for clinical practice & Discussion & Low-cost, scalable competency assessment \\
-\hline
-
-27 & Comparison with other studies & Discussion & Consistent with LLM scoring benchmarks \\
-\hline
-
-28 & Consistency across subgroups & Results; Figure 3 & English vs.\ Vietnamese comparison \\
-\hline
-
-29 & Consistency with other diagnostic studies & Discussion & Moderate correlation typical \\
-\hline
-
-30 & Separate reporting for reader interpretation & Results; Figures 2--3 & Stratified by comparison type \\
-\hline
-
-\end{tabularx}
-\end{table}
+\end{longtable}
+\end{singlespace}
 
 \end{document}

@@ -31,6 +31,8 @@ CODE_DIR = PROJECT / "code"
 
 CLAUDE_DTA = DATA_DIR / "pilot-coded.dta"
 CLAUDE_VN_DTA = DATA_DIR / "pilot-coded-vn.dta"
+CLAUDE_CONF_DTA = DATA_DIR / "pilot-coded-conf.dta"
+CLAUDE_CONF_VN_DTA = DATA_DIR / "pilot-coded-conf-vn.dta"
 HUMAN_XLSX = DATA_DIR / "pilot-human.xlsx"
 COMPILED_XLSX = DATA_DIR / "pilot-compiled-scores.xlsx"
 RUBRIC_JSON = CODE_DIR / "rubric.json"
@@ -102,6 +104,26 @@ def main():
     print("Loading Claude-coded data (Vietnamese)...")
     df_claude_vn = pd.read_stata(str(CLAUDE_VN_DTA))
     print(f"  {len(df_claude_vn)} observations")
+
+    # Load confidence-scored data (for AUROC)
+    df_conf = None
+    df_conf_vn = None
+    if CLAUDE_CONF_DTA.exists():
+        print("Loading Claude confidence data (English)...")
+        df_conf = pd.read_stata(str(CLAUDE_CONF_DTA))
+        print(f"  {len(df_conf)} observations")
+    else:
+        print("  (No confidence data for English -- skipping)")
+
+    if CLAUDE_CONF_VN_DTA.exists():
+        print("Loading Claude confidence data (Vietnamese)...")
+        df_conf_vn = pd.read_stata(str(CLAUDE_CONF_VN_DTA))
+        print(f"  {len(df_conf_vn)} observations")
+    else:
+        print("  (No confidence data for Vietnamese -- skipping)")
+
+    conf_cols = set(df_conf.columns) if df_conf is not None else set()
+    conf_vn_cols = set(df_conf_vn.columns) if df_conf_vn is not None else set()
 
     print("Loading human-coded data...")
     df_human = pd.read_excel(str(HUMAN_XLSX))
@@ -187,11 +209,31 @@ def main():
             claude_row = claude_match.iloc[0]
             claude_vn_row_a = (claude_vn_match.iloc[0]
                                if len(claude_vn_match) == 1 else None)
+
+            # Match confidence data rows
+            conf_row = None
+            if df_conf is not None:
+                conf_match = df_conf[
+                    (df_conf["name"] == name) & (df_conf["condition"] == condition)
+                ]
+                if len(conf_match) == 1:
+                    conf_row = conf_match.iloc[0]
+
+            conf_vn_row = None
+            if df_conf_vn is not None:
+                conf_vn_match = df_conf_vn[
+                    (df_conf_vn["name"] == name) & (df_conf_vn["condition"] == condition)
+                ]
+                if len(conf_vn_match) == 1:
+                    conf_vn_row = conf_vn_match.iloc[0]
+
             for iid in item_ids:
                 hid = claude_to_human_id(iid)
                 human_val = None
                 claude_val = None
                 claude_vn_val = None
+                llm_conf = None
+                llm_vn_conf = None
 
                 if hid in human_cols and pd.notna(human_row[hid]):
                     human_val = int(human_row[hid])
@@ -201,6 +243,15 @@ def main():
                         and pd.notna(claude_vn_row_a[iid])):
                     claude_vn_val = int(claude_vn_row_a[iid])
 
+                # Confidence scores
+                conf_col = iid + "_conf"
+                if (conf_row is not None and conf_col in conf_cols
+                        and pd.notna(conf_row[conf_col])):
+                    llm_conf = float(conf_row[conf_col])
+                if (conf_vn_row is not None and conf_col in conf_vn_cols
+                        and pd.notna(conf_vn_row[conf_col])):
+                    llm_vn_conf = float(conf_vn_row[conf_col])
+
                 agreement_rows.append({
                     "item": iid,
                     "provider": name,
@@ -208,6 +259,8 @@ def main():
                     "human": human_val,
                     "llm": claude_val,
                     "llm_vn": claude_vn_val,
+                    "llm_conf": llm_conf,
+                    "llm_vn_conf": llm_vn_conf,
                 })
 
         results.append({

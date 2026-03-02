@@ -5,3 +5,37 @@
 temp/
 *.log
 __pycache__/
+.claude/
+
+# Identifiable source data (transcripts, expert reviews, raw survey data)
+data/pilot.dta
+data/pilot-human.xlsx
+data/pilot-compiled-scores.xlsx
+data/pilot-coded.xlsx
+data/pilot-coded.dta
+data/pilot-coded.json
+data/pilot-coded-vn.dta
+data/pilot-coded-vn.json
+data/pilot-coded-conf.dta
+data/pilot-coded-conf.json
+data/pilot-coded-conf-vn.dta
+data/pilot-coded-conf-vn.json
+data/AI MED Pilot_Expert Review_DrMarwa.xlsx
+data/AI MED Pilot_Expert Review_DrThuy.xlsx
+data/cases.xlsx
+data/provider-id-map.json
+
+# Stale/intermediate files
+data/ROC.R
+data/pilot-data-compile.R
+data/validation-table2.png
+data/validation-table2.xlsx
+
+# Build artifacts
+manuscript/main.aux
+manuscript/main.bbl
+manuscript/main.blg
+manuscript/main.out
+manuscript/main.synctex.gz
+manuscript/*.docx
+manuscript/~$*
