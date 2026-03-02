@@ -180,7 +180,7 @@ The discriminative ability of the LLM coding was assessed using ROC analysis, tr
 
 \section{Discussion}
 
-Our results demonstrate that LLM-driven conversational vignettes produce competency measures that correlate well with expert evaluations of provider performance (Pearson's $\rho$ = 0.55--0.60). The method eliminates the need for in-person enumerators while preserving the open-ended interaction format that is the foundation of vignette validity \citep{das2005which}. The platform's practical utility is substantial: 132 clinical interactions were completed at a total chatbot cost of under USD 2, with no in-person support beyond a brief Zoom orientation. Including human coding of transcripts, the total cost of the validation exercise was approximately USD 15 per provider -- an order of magnitude less than traditional in-person vignette surveys, which typically require two trained enumerators per interaction plus travel and per diem costs \citep{andrews2021quality}.
+Our results demonstrate that LLM-driven conversational vignettes produce competency measures that correlate well with expert evaluations of provider performance (Pearson's $\rho$ = 0.55--0.60). The method eliminates the need for in-person enumerators while preserving the open-ended interaction format that is the foundation of vignette validity \citep{das2005which}. The platform's practical utility is substantial: 132 clinical interactions were completed at a total chatbot cost of under USD 2, with no in-person support beyond a brief Zoom orientation -- a fraction of the cost of traditional in-person vignette surveys, which typically require two trained enumerators per interaction plus travel and per diem costs \citep{andrews2021quality}.
 
 We found that the Anthropic Claude LLM was able to extract structured data from transcripts to our specifications, and that these data correlated moderately with human-coded ground truth (Pearson's $\rho$ = 0.53; OLS $r^{2}$ = 0.28). Notably, LLM coding performed comparably when applied directly to Vietnamese transcripts ($\rho$ = 0.51; $r^{2}$ = 0.26), without a separate translation step. This finding has practical significance: it suggests that multilingual deployment does not require an intermediate translation pipeline, reducing both cost and potential for translation-induced error. This pattern is consistent with recent benchmarks of LLM-based clinical scoring, where automated systems achieve moderate agreement with human evaluators but struggle with nuanced interpretation of free-text responses \citep{geathers2025benchmarking, kuling2026assessment}. While LLM-assisted translation and human data extraction was not excessively burdensome at this scale, further research on the reliability and cost of automated data extraction may streamline data encoding at larger scales. Automated data extraction also preserves complete data in the form of transcripts and could enable future refinement or modification of checklists to fit the research purpose, rather than pre-encoding the data structure. Future research might also assess more expensive models, such as modern ``reasoning'' models, or develop a multi-shot ``voting'' algorithm to overcome some of its variability.
 
@@ -246,21 +246,5 @@ The authors declare no competing interests.
 \section*{Financial disclosure}
 
 This work was supported by the Harvard University Asia Center, the Harvard University Rose Service Learning Fellowship program, the Harvard University Institute for Quantitative Social Science, and Gilead Sciences. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.
-
-\section*{Supporting information}
-
-\noindent \textbf{S1 Appendix.} Clinical case scenarios and essential diagnostic checklists for all ten vignette cases, supplementary tables, and focus group supplementary results.
-
-\noindent \textbf{Table S1.} Case scenarios and realism ratings from the focus group, including opening statements, recommended treatment, and mean realism ratings across four dimensions.
-
-\noindent \textbf{Table S2.} Summary of provider performance by case in the validation sample, including checklist completion, correct diagnosis rates, and interaction duration.
-
-\noindent \textbf{Figure S1.} Average realism rating by condition and feedback question in the focus group.
-
-\noindent \textbf{Figure S2.} Average case duration by condition in the focus group.
-
-\noindent \textbf{Figure S3.} Distribution of focus group realism ratings by feedback question.
-
-\noindent \textbf{S1 Checklist.} STROBE checklist for observational studies.
 
 \end{document}
